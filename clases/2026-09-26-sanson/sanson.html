@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sansón y la fuerza de Dios</title>
+<meta name="description" content="Clase de Escuela Dominical sobre Sansón para niños de 6 a 9 años: guía del maestro, juegos, manualidad y hojas imprimibles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  :root {
+    --ground: #FFFCF6;
+    --surface: #FFFFFF;
+    --ink: #241C3B;
+    --muted: #625A78;
+    --line: #E9E1D2;
+    --honey: #F2B632;
+    --honey-ink: #9A5B00;
+    --honey-wash: #FFF1CC;
+    --olive: #4D6A2A;
+    --olive-wash: #EAF1DD;
+    --indigo: #3B2F7A;
+    --indigo-wash: #ECE9FA;
+    --paper: #FFFFFF;
+    --paper-ink: #1E1E1E;
+    --shadow: 0 1px 2px rgba(36, 28, 59, .06), 0 6px 20px rgba(36, 28, 59, .06);
+    --display: "Baloo 2", "Trebuchet MS", "Segoe UI", sans-serif;
+    --body: "Atkinson Hyperlegible", "Segoe UI", Verdana, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #17132A;
+      --surface: #211B39;
+      --ink: #F2EEFF;
+      --muted: #B4ABD2;
+      --line: #3A3359;
+      --honey: #F2B632;
+      --honey-ink: #F6C65A;
+      --honey-wash: #3A2E14;
+      --olive: #AFCB7E;
+      --olive-wash: #25301A;
+      --indigo: #C9C0FF;
+      --indigo-wash: #2C2552;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 20px rgba(0, 0, 0, .25);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #17132A;
+    --surface: #211B39;
+    --ink: #F2EEFF;
+    --muted: #B4ABD2;
+    --line: #3A3359;
+    --honey: #F2B632;
+    --honey-ink: #F6C65A;
+    --honey-wash: #3A2E14;
+    --olive: #AFCB7E;
+    --olive-wash: #25301A;
+    --indigo: #C9C0FF;
+    --indigo-wash: #2C2552;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 20px rgba(0, 0, 0, .25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding-inline: 20px; }
+  h1, h2, h3, h4 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+  h2 { font-size: 2rem; font-weight: 800; }
+  h3 { font-size: 1.35rem; font-weight: 800; }
+  h4 { font-size: 1.1rem; font-weight: 600; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding-left: 1.3em; }
+  li + li { margin-top: .3em; }
+  a { color: var(--indigo); }
+  a:focus-visible, input:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+
+  /* Portada */
+  .top { padding-block: 40px 28px; }
+  .eyebrow {
+    font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700;
+  }
+  .top h1 { font-size: clamp(2.3rem, 7vw, 3.6rem); font-weight: 800; margin-top: 8px; }
+  .top h1 span { color: var(--honey-ink); }
+  .lead { font-size: 1.15rem; max-width: 60ch; margin-top: 12px; color: var(--muted); }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .fact {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 8px 14px; display: flex; flex-direction: column;
+  }
+  .fact b { font-family: var(--display); font-size: 1.1rem; }
+  .fact small { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+
+  /* Navegación */
+  nav.jump {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--ground); border-bottom: 1px solid var(--line);
+  }
+  nav.jump .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; }
+  nav.jump a {
+    white-space: nowrap; text-decoration: none; color: var(--ink);
+    font-weight: 700; font-size: .92rem; padding: 6px 12px; border-radius: 999px;
+  }
+  nav.jump a:hover { background: var(--honey-wash); }
+
+  /* Secciones */
+  main section.part { padding-block: 44px 8px; scroll-margin-top: 56px; }
+  .part-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .part-head p { color: var(--muted); max-width: 62ch; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card.lift { box-shadow: var(--shadow); }
+  .verse {
+    background: var(--indigo-wash); border-radius: 16px; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .verse q { font-family: var(--display); font-size: 1.7rem; font-weight: 800; line-height: 1.2; quotes: "“" "”"; color: var(--indigo); }
+  .verse cite { font-style: normal; font-weight: 700; }
+  .truth { background: var(--honey-wash); border-radius: 16px; padding: 18px 22px; }
+  .truth b { font-family: var(--display); font-size: 1.3rem; display: block; }
+  .label {
+    font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--muted);
+  }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding-left: 1.6em; position: relative; }
+  .checklist li::before {
+    content: ""; position: absolute; left: 0; top: .28em; width: 1em; height: 1em;
+    border: 2px solid var(--muted); border-radius: 4px;
+  }
+
+  /* Plan */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+  table.plan { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .95rem; }
+  table.plan th, table.plan td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.plan tr:last-child td { border-bottom: 0; }
+  table.plan th { font-size: .75rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+  table.plan td.t { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+  table.plan td b { font-family: var(--display); font-size: 1.05rem; }
+  .tip { border-left: 4px solid var(--olive); background: var(--olive-wash); padding: 12px 16px; border-radius: 0 10px 10px 0; }
+  .tip b { color: var(--olive); }
+
+  /* Historia */
+  .scene { display: grid; grid-template-columns: 44px 1fr; gap: 14px; }
+  .scene-n {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--honey); color: #2A1E00;
+    font-family: var(--display); font-weight: 800; font-size: 1.3rem;
+    display: grid; place-items: center;
+  }
+  .scene-body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .scene-body .ref { color: var(--muted); font-size: .88rem; font-weight: 700; }
+  .story p { max-width: 66ch; }
+  .cue {
+    display: inline; background: var(--indigo-wash); color: var(--indigo);
+    border-radius: 6px; padding: 1px 7px; font-size: .88em; font-weight: 700;
+  }
+  .ask { font-weight: 700; }
+  .ask::before { content: "Pregunta: "; color: var(--honey-ink); }
+  .note { font-size: .92rem; color: var(--muted); font-style: italic; }
+
+  /* Juegos */
+  .game-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    font-size: .78rem; font-weight: 700; padding: 2px 10px; border-radius: 999px;
+    background: var(--honey-wash); color: var(--honey-ink);
+  }
+  .pill.o { background: var(--olive-wash); color: var(--olive); }
+  .qa { counter-reset: q; list-style: none; padding: 0; display: grid; gap: 8px; }
+  .qa li { counter-increment: q; display: grid; grid-template-columns: 2em 1fr; margin: 0; }
+  .qa li::before { content: counter(q) "."; font-weight: 700; color: var(--honey-ink); }
+  .qa li span { color: var(--muted); }
+  .cups { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 4px; }
+  .cups div { display: flex; gap: 4px; }
+  .cups span {
+    font-size: .78rem; font-weight: 700; background: var(--surface); border: 2px solid var(--honey);
+    border-radius: 4px 4px 12px 12px; padding: 6px 8px; min-width: 64px; text-align: center;
+  }
+
+  /* Hojas imprimibles */
+  .print-note { display: flex; flex-direction: column; gap: 10px; }
+  .toggle { display: flex; gap: 10px; align-items: center; font-weight: 700; cursor: pointer; }
+  .toggle input { width: 20px; height: 20px; accent-color: var(--olive); }
+  .hoja {
+    background: var(--paper); color: var(--paper-ink);
+    border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow);
+    padding: 28px 30px; display: flex; flex-direction: column; gap: 16px;
+    font-family: var(--body);
+  }
+  .hoja-top { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: .95rem; }
+  .hoja-top .blank { display: inline-block; min-width: 180px; border-bottom: 2px solid #999; }
+  .hoja h3 { font-size: 1.9rem; text-align: center; color: var(--paper-ink); }
+  .hoja .sub { text-align: center; font-size: 1.05rem; }
+  .hoja svg { width: 100%; height: auto; display: block; }
+  .art { max-width: 520px; margin: 0 auto; width: 100%; }
+  .ws-wrap { overflow-x: auto; }
+  table.ws { border-collapse: collapse; margin: 0 auto; }
+  table.ws td {
+    width: 2.2em; height: 2.2em; text-align: center; font-family: var(--display);
+    font-weight: 800; font-size: 1.25rem; border: 1px solid #CFCFCF; color: #1E1E1E; padding: 0;
+  }
+  table.ws.key td { width: 1.6em; height: 1.6em; font-size: .9rem; }
+  table.ws.key td.hit { background: #FFE08A; }
+  .wordbank { display: flex; flex-wrap: wrap; gap: 8px 10px; justify-content: center; list-style: none; padding: 0; }
+  .wordbank li { margin: 0; border: 2px solid #1E1E1E; border-radius: 999px; padding: 2px 14px; font-weight: 700; }
+  .order-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .order-box { border: 2px dashed #888; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-height: 170px; }
+  .order-box .num { width: 38px; height: 38px; border: 2px solid #1E1E1E; border-radius: 50%; flex: none; }
+  .order-box .row { display: flex; gap: 10px; align-items: flex-start; }
+  .order-box .draw { flex: 1; border-top: 1px solid #DDD; margin-top: 4px; }
+  .fill { font-size: 1.35rem; line-height: 2.4; text-align: center; font-family: var(--display); font-weight: 600; }
+  .fill .gap { display: inline-block; min-width: 130px; border-bottom: 2px solid #1E1E1E; }
+  .tf { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .tf li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; margin: 0; font-size: 1.05rem; }
+  .tf .vf { display: flex; gap: 8px; font-family: var(--display); font-weight: 800; }
+  .tf .vf span { width: 34px; height: 34px; border: 2px solid #1E1E1E; border-radius: 50%; display: grid; place-items: center; }
+  .drawbox { border: 2px solid #1E1E1E; border-radius: 12px; min-height: 220px; padding: 10px; font-weight: 700; }
+  .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+  footer { padding-block: 40px; color: var(--muted); font-size: .9rem; }
+
+  @media (max-width: 520px) {
+    .hoja { padding: 18px 14px; }
+    table.ws td { width: 1.7em; height: 1.7em; font-size: 1rem; }
+    .scene { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { scroll-behavior: smooth; }
+
+  /* Impresión */
+  @page { margin: 12mm; }
+  @media print {
+    :root:not(#_), :root[data-theme]:not(#_) {
+      color-scheme: light;
+      --ground: #FFFFFF; --surface: #FFFFFF; --ink: #1E1E1E; --muted: #555555; --line: #CCCCCC;
+      --honey-ink: #7A4800; --honey-wash: #FFF4D6; --olive: #3E5A1E; --olive-wash: #F0F5E8;
+      --indigo: #2E2466; --indigo-wash: #F1EFFA; --shadow: none;
+    }
+    body { font-size: 12pt; }
+    nav.jump, .no-print { display: none !important; }
+    .wrap { max-width: none; padding-inline: 0; }
+    main section.part { padding-block: 0; }
+    .part { break-before: page; }
+    #resumen { break-before: auto; }
+    .card, .scene, .verse, .truth, .tip, tr { break-inside: avoid; }
+    .hoja { break-before: page; border: 0; border-radius: 0; box-shadow: none; padding: 0; gap: 12px; }
+    .hoja .art { max-width: 165mm; }
+    #hojas .part-head { display: none; }
+    body.solo-hojas .guia { display: none !important; }
+    body.solo-hojas .hoja:first-of-type { break-before: auto; }
+  }
+</style>
+
+<div class="guia">
+  <header class="top">
+    <div class="wrap">
+      <p class="eyebrow">Escuela Dominical · Iglesia Catedral de Fe · Niños de 6 a 9 años · Sábado 26 de septiembre</p>
+      <h1>Sansón: <span>mi fuerza viene de Dios</span></h1>
+      <p class="lead">Una clase de hora y media para descubrir que la fuerza de Sansón no estaba en su cabello ni en sus músculos, sino en Dios, y que Dios también nos da fuerza a nosotros.</p>
+      <div class="facts">
+        <div class="fact"><small>Pasaje</small><b>Jueces 13–16</b></div>
+        <div class="fact"><small>Versículo</small><b>Filipenses 4:13</b></div>
+        <div class="fact"><small>Duración</small><b>90 minutos</b></div>
+        <div class="fact"><small>Edades</small><b>6 a 9 años</b></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jump" aria-label="Secciones">
+    <div class="wrap">
+      <a href="#resumen">Resumen</a>
+      <a href="#plan">Plan de clase</a>
+      <a href="#historia">Historia</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#manualidad">Manualidad</a>
+      <a href="#hojas">Hojas imprimibles</a>
+      <a href="#respuestas">Respuestas</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <!-- RESUMEN -->
+  <section class="part guia" id="resumen">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro</p>
+        <h2>Resumen de la clase</h2>
+      </div>
+
+      <div class="truth">
+        <span class="label">Verdad central</span>
+        <b>La fuerza de Sansón venía de Dios. Cuando oramos y confiamos en Él, Dios también nos da fuerza.</b>
+      </div>
+
+      <div class="verse">
+        <span class="label">Versículo para memorizar</span>
+        <q>Todo lo puedo en Cristo que me fortalece.</q>
+        <cite>Filipenses 4:13</cite>
+      </div>
+
+      <div class="card">
+        <h3>Tres puntos principales</h3>
+        <ul>
+          <li><strong>Dios nos da habilidades y dones especiales.</strong> A Sansón le dio fuerza; a cada uno de nosotros nos da algo especial.</li>
+          <li><strong>Debemos tener cuidado en quién confiamos</strong>, porque algunas personas intentarán engañarnos, como Dalila a Sansón.</li>
+          <li><strong>Cuando nos arrepentimos, Dios nos perdona.</strong> Sansón se equivocó, pero oró, y Dios lo escuchó.</li>
+        </ul>
+        <p class="note">Puntos tomados de la lección 28 de True Way Kids.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Objetivos</h3>
+          <p>Al terminar la clase, los niños podrán:</p>
+          <ul>
+            <li>Contar con sus palabras los momentos principales de la vida de Sansón.</li>
+            <li>Explicar que la fuerza de Sansón venía de Dios, no de su cabello.</li>
+            <li>Nombrar una situación de su semana en la que necesitan la fuerza de Dios.</li>
+            <li>Decir de memoria Filipenses 4:13.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Materiales</h3>
+          <ul class="checklist">
+            <li>Biblia (marca Jueces 13, 14:5–9 y 16)</li>
+            <li>Un ovillo de lana marrón o negra</li>
+            <li>Papel higiénico o tiras de papel crepé</li>
+            <li>10 vasos descartables y un plumón</li>
+            <li>Una pelota suave o un peluche</li>
+            <li>Platos de papel (uno por niño)</li>
+            <li>Goma, cinta adhesiva, crayolas, tijeras de punta roma</li>
+            <li>Dos cajas o sillas (las «columnas»)</li>
+            <li>Un vaso, papel arrugado y unos caramelos</li>
+            <li>Una venda para los ojos y una golosina</li>
+            <li>Copias de las hojas imprimibles</li>
+            <li>Opcional: un poco de miel o galletas de miel para el final</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Antes del sábado</h3>
+        <ul class="checklist">
+          <li>Lee Jueces 13–16 completo en tu Biblia para conocer bien la historia.</li>
+          <li>Corta la lana en tiras de unos 40 cm y prepara 7 trenzas por niño (o tiras sueltas para que los mayores las trencen).</li>
+          <li>Escribe en los 10 vasos las palabras del versículo (ver juego «Derriba el templo»).</li>
+          <li>Imprime las hojas: la de colorear y el laberinto funcionan mejor para 6–7 años; la sopa de letras y «Ordena la historia», para 8–9 años.</li>
+          <li>Pregunta si algún niño es alérgico a la miel antes de compartirla.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN -->
+  <section class="part guia" id="plan">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro</p>
+        <h2>Plan de clase, minuto a minuto</h2>
+        <p>Los tiempos son una guía. Con niños de esta edad conviene alternar momentos tranquilos con momentos de movimiento.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="plan">
+          <thead><tr><th>Tiempo</th><th>Actividad</th><th>Qué hacer</th></tr></thead>
+          <tbody>
+            <tr><td class="t">0:00–0:20</td><td><b>Inicio</b></td><td>Oración de apertura. Canten «Mi Dios es tan grande» (con mímica de fuerza) y «Cristo me ama». Juego «¿Quién es fuerte?». Recuerda que los jueces eran líderes que Dios levantaba para Israel y conversen sobre los dones que Dios nos da.</td></tr>
+            <tr><td class="t">0:20–0:40</td><td><b>Historia bíblica</b></td><td>Cuenta la historia de Sansón con la lana y los accesorios. Los niños participan con sonidos y movimientos. Termina con algunas preguntas de la «Pelota de preguntas».</td></tr>
+            <tr><td class="t">0:40–0:45</td><td><b>Demostración de la confianza</b></td><td>El vaso con caramelos encima y papel debajo (ver Juegos).</td></tr>
+            <tr><td class="t">0:45–0:52</td><td><b>Juego del arrepentimiento</b></td><td>Con los ojos vendados, buscan la golosina; «¡Arrepiéntete!» significa dar la vuelta.</td></tr>
+            <tr><td class="t">0:52–0:57</td><td><b>Sansón, Sansón, Dalila</b></td><td>Juego de movimiento, como «Pato, pato, ganso».</td></tr>
+            <tr><td class="t">0:57–1:12</td><td><b>Manualidad</b></td><td>Sansón de siete trenzas: con plato de papel o con la hoja de True Way Kids «Pega o dibuja el cabello de Sansón».</td></tr>
+            <tr><td class="t">1:12–1:20</td><td><b>Hoja práctica</b></td><td>Cada niño hace una hoja según su edad. Las demás se las llevan a casa.</td></tr>
+            <tr><td class="t">1:20–1:30</td><td><b>Cierre</b></td><td>Versículo con «Derriba el templo de vasos». Cada niño dice en qué necesita la fuerza de Dios esta semana. Oración por ellos, por las ofrendas y la salud de los compañeros. Opcional: comparte un poco de miel.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><b>Si sobra tiempo:</b> jueguen «Sansón dice» o «Rompe las cuerdas», pide a los niños que usen su títere de Sansón para volver a contar la historia a un compañero, o jueguen «¿Dónde está la trenza?» (esconde una trenza de lana en el salón y guíalos con «frío» y «caliente»).</div>
+      <div class="tip"><b>Material de True Way Kids:</b> del <a href="https://truewaykids.com/es/sanson/">paquete de Sansón para 5+</a> puedes imprimir las láminas de la historia para mostrarlas mientras narras, la hoja «Revisión de la historia de Sansón», «Encuentra 10 diferencias» y la hoja «Pega o dibuja sobre el cabello de Sansón» para la manualidad.</div>
+      <div class="tip"><b>Edades mezcladas:</b> forma parejas de un niño mayor con uno menor. Los de 8–9 años pueden leer las preguntas y ayudar a trenzar; los de 6–7 pueden dibujar y colorear en lugar de escribir.</div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="part guia story" id="historia">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro · 20 minutos</p>
+        <h2>La historia de Sansón, contada para niños</h2>
+        <p>Léela en voz alta con emoción, o cuéntala con tus palabras. Las indicaciones <span class="cue">en morado</span> son acciones para ti o para los niños.</p>
+      </div>
+
+      <div class="card">
+        <h4>Para empezar</h4>
+        <p>«¿Quién aquí es fuerte? ¡Muéstrenme sus músculos! <span class="cue">Todos muestran los brazos</span> Hoy vamos a conocer al hombre más fuerte de toda la Biblia. Pero hay un secreto en esta historia, y al final vamos a descubrir de dónde venía su fuerza. ¿Listos?»</p>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">1</div>
+        <div class="scene-body">
+          <h3>Una promesa especial</h3>
+          <p class="ref">Jueces 13</p>
+          <p>Hace mucho tiempo, el pueblo de Israel estaba en problemas. Unos enemigos llamados <strong>filisteos</strong> los molestaban y los trataban muy mal.</p>
+          <p>Había una pareja, Manoa y su esposa, que no tenían hijos. Un día, un ángel de Dios visitó a la mujer y le dijo: «¡Vas a tener un hijo! Será apartado para Dios desde que nazca. Nunca deberá cortarse el cabello, y él comenzará a librar a Israel de los filisteos».</p>
+          <p>El bebé nació y lo llamaron <strong>Sansón</strong>. Sansón creció, y Dios lo bendecía. <span class="cue">Muestra la lana</span> Su cabello largo era la señal de su promesa especial con Dios.</p>
+          <p class="ask">¿Qué era lo que Sansón nunca debía hacer?</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">2</div>
+        <div class="scene-body">
+          <h3>¡Un león!</h3>
+          <p class="ref">Jueces 14:5–9</p>
+          <p>Un día, Sansón caminaba entre unos viñedos cuando de repente… ¡GRRRR! <span class="cue">Los niños rugen</span> ¡Un león joven salió rugiendo hacia él!</p>
+          <p>Sansón no tenía espada ni lanza. Pero el Espíritu de Dios vino sobre él, le dio una fuerza enorme, y Sansón venció al león con sus propias manos.</p>
+          <p>Días después, pasó otra vez por ese lugar y encontró algo sorprendente: ¡unas abejas habían hecho un panal de miel! Sansón sacó miel y la fue comiendo por el camino. <span class="cue">Todos se frotan la pancita: «¡Mmm!»</span></p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">3</div>
+        <div class="scene-body">
+          <h3>Las puertas de la ciudad</h3>
+          <p class="ref">Jueces 16:1–3</p>
+          <p>Otra vez, Sansón estaba en Gaza, una ciudad de los filisteos. Sus enemigos cerraron las enormes puertas de la ciudad y dijeron: «Cuando amanezca, lo atraparemos».</p>
+          <p>Pero a medianoche Sansón se levantó, arrancó las puertas de la ciudad —¡con postes y todo!—, se las puso sobre los hombros y las llevó hasta lo alto de un monte. <span class="cue">Un voluntario «carga» una caja o una silla</span></p>
+          <p class="ask">¿Se imaginan la cara de los filisteos en la mañana?</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">4</div>
+        <div class="scene-body">
+          <h3>Dalila y el secreto</h3>
+          <p class="ref">Jueces 16:4–20</p>
+          <p>Los filisteos estaban furiosos. Entonces buscaron a una mujer llamada <strong>Dalila</strong>, a quien Sansón quería mucho, y le ofrecieron mucho dinero si descubría el secreto de su fuerza. Dalila no era una verdadera amiga.</p>
+          <p>—Sansón, ¿cuál es el secreto de tu fuerza? —le preguntó.</p>
+          <p>Sansón no le dijo la verdad: «Si me atan con siete cuerdas nuevas, seré débil como cualquier hombre». Lo ataron… ¡y las rompió como si fueran hilos! <span class="cue">Rompe una tira de papel</span></p>
+          <p>Dalila insistió otra vez… y otra vez. Sansón le dijo que lo ataran con sogas nuevas, que tejieran sus siete trenzas en un telar… ¡y siempre se soltaba! Pero Dalila le insistía todos los días, hasta que Sansón se cansó y le contó el secreto: «Nunca me han cortado el cabello, porque estoy apartado para Dios. Si me lo cortan, perderé mi fuerza».</p>
+          <p>Esa noche, mientras Sansón dormía <span class="cue">Los niños roncan suavemente</span>, le cortaron las siete trenzas. Al despertar, quiso defenderse como siempre… pero su fuerza ya no estaba. La Biblia dice algo muy triste: Sansón no sabía que el Señor se había apartado de él.</p>
+          <div class="card">
+            <p><strong>Detente y explica:</strong> «¿La fuerza estaba en el cabello? <em>¡No!</em> La fuerza venía de Dios. El cabello era la señal de su promesa con Dios. Cuando Sansón dejó de cuidar esa promesa, se quedó sin fuerza».</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">5</div>
+        <div class="scene-body">
+          <h3>En la cárcel</h3>
+          <p class="ref">Jueces 16:21–22</p>
+          <p>Los filisteos atraparon a Sansón, le hicieron mucho daño —le quitaron la vista— y lo pusieron en la cárcel a moler grano, dando vueltas y vueltas a una piedra muy pesada. <span class="cue">Todos caminan lento en círculo</span></p>
+          <p>Pero la Biblia nos cuenta un detalle muy bonito: <strong>el cabello de Sansón comenzó a crecer otra vez.</strong> Dios no se había olvidado de él.</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">6</div>
+        <div class="scene-body">
+          <h3>La última oración</h3>
+          <p class="ref">Jueces 16:23–30</p>
+          <p>Un día, los filisteos hicieron una gran fiesta en el templo de su dios falso, Dagón. Estaban tan orgullosos que trajeron a Sansón para burlarse de él. Un muchacho lo llevaba de la mano, y Sansón le pidió: «Déjame tocar las columnas que sostienen el templo». <span class="cue">Coloca las dos cajas o sillas</span></p>
+          <p>Entonces Sansón oró: <strong>«Señor, acuérdate de mí. Dame fuerza solo esta vez»</strong>. <span class="cue">Todos juntan las manos</span></p>
+          <p>¡Y Dios escuchó su oración! Sansón empujó las dos columnas con todas sus fuerzas <span class="cue">Todos empujan el aire</span> y… ¡CRAAAC! ¡El templo se vino abajo! Así, Dios usó a Sansón una última vez para librar a su pueblo de sus enemigos.</p>
+          <p class="note">Nota para el maestro: Jueces 16:30 dice que Sansón también murió ese día. Si los niños preguntan, dilo con calma: Sansón terminó su vida confiando en Dios, y la Biblia lo recuerda como un hombre de fe (Hebreos 11:32–34).</p>
+        </div>
+      </div>
+
+      <div class="card lift">
+        <h3>¿Qué aprendemos de Sansón?</h3>
+        <ul>
+          <li><strong>La fuerza viene de Dios</strong>, no del cabello ni de los músculos.</li>
+          <li><strong>Cuando nos alejamos de Dios, nos debilitamos.</strong> Sansón no cuidó su promesa y perdió su fuerza.</li>
+          <li><strong>Dios nos escucha cuando volvemos a Él.</strong> Aunque Sansón se había equivocado, oró, y Dios le respondió.</li>
+          <li><strong>Dios también te da fuerza a ti:</strong> para decir la verdad, obedecer a tus papás, ser valiente cuando tienes miedo y ser amable aunque otros no lo sean.</li>
+        </ul>
+        <p class="ask">¿En qué momento de esta semana necesitas que Dios te dé fuerza?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section class="part guia" id="juegos">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Juegos y dinámicas</p>
+        <h2>Para moverse, repasar y memorizar</h2>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Rompehielo</span><span class="pill o">10 min</span></div>
+        <h3>¿Quién es fuerte?</h3>
+        <p>Pide a los niños que hagan «pruebas de fuerza» divertidas: cargar un cojín con un dedo, empujar la pared, mantener un libro sobre la cabeza. Luego pregunta: <em>«¿De dónde sacamos la fuerza? ¿Qué nos hace fuertes?»</em> Escucha sus respuestas (comida, ejercicio, dormir…) y di: «Hoy vamos a conocer a alguien cuya fuerza venía de un lugar muy especial».</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Lección objetiva</span><span class="pill o">5 min</span><span class="pill o">Vaso · papel · caramelos</span></div>
+        <h3>Demostración de la confianza</h3>
+        <p>Antes de clase, llena un vaso con papel arrugado y pon algunos caramelos encima. Muéstralo: «¡Miren, está lleno de dulces!». Luego quita los caramelos y muestra que debajo solo hay papel. Explica que algunas personas intentan engañarnos haciéndonos creer algo que no es verdad. Dalila parecía una amiga, pero engañó a Sansón, y él no debió confiarle su secreto.</p>
+        <p class="ask">¿En quién podemos confiar? (papá, mamá, maestros… y siempre en Jesús)</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Juego</span><span class="pill o">7 min</span><span class="pill o">Venda · golosina · silla</span></div>
+        <h3>Juego del arrepentimiento</h3>
+        <p>En un espacio amplio y sin obstáculos, pon una golosina sobre una silla. Explica que arrepentirse es lamentar lo malo y <strong>darle la espalda</strong> para tomar el camino correcto. Venda los ojos a un voluntario, hazlo girar y guíalo hacia la golosina. Cada vez que vaya en la dirección equivocada, todos gritan <strong>«¡Arrepiéntete!»</strong> y debe dar la vuelta. Repite con varios niños.</p>
+        <p>Al final di: «Sansón no podía ver, pero podía confiar en que Dios lo perdonaría si se arrepentía. Cuando hacemos algo malo, le decimos a Dios que lo sentimos y dejamos de hacerlo».</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Movimiento</span><span class="pill o">5 min</span></div>
+        <h3>Sansón, Sansón, Dalila</h3>
+        <p>Como «Pato, pato, ganso». Los niños se sientan en círculo y uno camina por fuera tocando cabezas y diciendo «Sansón, Sansón…». Cuando dice «¡Dalila!», el niño tocado se levanta y lo persigue. Si no lo alcanza antes de que se siente en su lugar, le toca caminar a él.</p>
+        <p>Después comenta cómo Dalila estaba «detrás» de Sansón para descubrir su secreto y hacerle daño.</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Repaso</span><span class="pill o">al final de la historia</span><span class="pill o">Pelota suave</span></div>
+        <h3>Pelota de preguntas</h3>
+        <p>Sentados en círculo, lanza la pelota a un niño y hazle una pregunta. Si responde, lanza la pelota a otro compañero y tú haces la siguiente pregunta. Si no sabe, puede pedir ayuda a un amigo.</p>
+        <ol class="qa">
+          <li>¿Quién anunció que Sansón iba a nacer? <span>— Un ángel de Dios.</span></li>
+          <li>¿Qué nunca debía hacer Sansón? <span>— Cortarse el cabello.</span></li>
+          <li>¿Qué animal atacó a Sansón? <span>— Un león.</span></li>
+          <li>¿Qué encontró después en ese lugar? <span>— Un panal de miel.</span></li>
+          <li>¿Qué cargó Sansón hasta lo alto de un monte? <span>— Las puertas de la ciudad de Gaza.</span></li>
+          <li>¿Cómo se llamaban los enemigos de Israel? <span>— Los filisteos.</span></li>
+          <li>¿Quién engañó a Sansón para saber su secreto? <span>— Dalila.</span></li>
+          <li>¿Cuántas trenzas tenía Sansón? <span>— Siete.</span></li>
+          <li>¿De dónde venía realmente la fuerza de Sansón? <span>— De Dios.</span></li>
+          <li>¿Qué pasó con su cabello en la cárcel? <span>— Volvió a crecer.</span></li>
+          <li>¿Qué le pidió Sansón a Dios al final? <span>— Que se acordara de él y le diera fuerza una vez más.</span></li>
+          <li>¿Para qué cosas necesitas tú la fuerza de Dios? <span>— Respuesta personal.</span></li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Versículo</span><span class="pill o">Cierre</span><span class="pill o">10 vasos · pelota</span></div>
+        <h3>Derriba el templo de vasos</h3>
+        <p>Escribe una palabra del versículo en cada vaso y arma una pirámide (el «templo»). Lean juntos el versículo. Por turnos, un niño lanza la pelota para derribar el templo, como Sansón. Luego, entre todos, vuelven a armar la pirámide <strong>en el orden correcto</strong> diciendo el versículo. Cada vez que lo reconstruyan, quita un vaso de la vista para que lo digan de memoria.</p>
+        <div class="cups" aria-label="Pirámide de vasos con el versículo">
+          <div><span>Filipenses</span></div>
+          <div><span>fortalece</span><span>4:13</span></div>
+          <div><span>Cristo</span><span>que</span><span>me</span></div>
+          <div><span>Todo</span><span>lo</span><span>puedo</span><span>en</span></div>
+        </div>
+        <p class="note">El orden de lectura va de abajo hacia arriba y de izquierda a derecha.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="game-meta"><span class="pill">Movimiento</span><span class="pill o">Si sobra tiempo</span></div>
+          <h3>Sansón dice</h3>
+          <p>Como «Simón dice», pero con la historia. Solo se obedece cuando empiezas con «Sansón dice…».</p>
+          <ul>
+            <li>…ruge como un león</li>
+            <li>…come miel del panal</li>
+            <li>…carga las puertas de la ciudad</li>
+            <li>…rompe las cuerdas</li>
+            <li>…duerme como Sansón</li>
+            <li>…muele el grano en círculos</li>
+            <li>…junta las manos para orar</li>
+            <li>…empuja las columnas</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="game-meta"><span class="pill">Movimiento</span><span class="pill o">Si sobra tiempo</span><span class="pill o">Papel higiénico</span></div>
+          <h3>Rompe las cuerdas</h3>
+          <p>Enrolla papel higiénico o crepé alrededor de las muñecas de un voluntario (dos o tres vueltas). Toda la clase dice junta el versículo, y al terminar «¡…que me fortalece!», el niño rompe las «cuerdas». Repite hasta que todos tengan su turno.</p>
+          <p class="note">Recuérdales: no somos fuertes por nosotros mismos; Dios nos da la fuerza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUALIDAD -->
+  <section class="part guia" id="manualidad">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Manualidad · 15 minutos</p>
+        <h2>Sansón de plato de papel con siete trenzas</h2>
+        <p>Si no consigues platos de papel, usa la plantilla imprimible de la última hoja pegada sobre cartulina.</p>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>Por cada niño</h3>
+          <ul class="checklist">
+            <li>1 plato de papel (o la plantilla sobre cartulina)</li>
+            <li>7 trenzas de lana de unos 30 cm (preparadas antes)</li>
+            <li>Crayolas o plumones</li>
+            <li>Goma y cinta adhesiva</li>
+            <li>La tira «¡Mi fuerza viene de Dios!» de la plantilla</li>
+            <li>Opcional: un palito de helado para hacerlo títere</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pasos</h3>
+          <ol>
+            <li>Dibuja la cara de Sansón en el plato: ojos, nariz y una sonrisa.</li>
+            <li>Coloréala.</li>
+            <li>Pega las trenzas alrededor de la parte de arriba y los costados. Pégalas con cinta por detrás para que queden firmes.</li>
+            <li>Cuenten las trenzas en voz alta: «¡Una, dos… siete!».</li>
+            <li>Pega la tira «¡Mi fuerza viene de Dios!» en la parte de abajo.</li>
+            <li>Si quieres, pega un palito detrás para usarlo como títere.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="tip"><b>Mientras trabajan, pregunta:</b> «Si Sansón pierde sus trenzas, ¿pierde su fuerza porque el cabello era mágico?». Ayúdalos a responder: «No, la fuerza venía de Dios; el cabello era la señal de su promesa».</div>
+      <div class="tip"><b>Para ahorrar tiempo:</b> los niños de 8–9 años pueden trenzar su propia lana (tres hebras); para los de 6–7, ten las trenzas listas o usa tiras sueltas.</div>
+    </div>
+  </section>
+
+  <!-- HOJAS -->
+  <section class="part" id="hojas">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Hojas imprimibles</p>
+        <h2>Actividades para imprimir</h2>
+        <div class="card print-note no-print">
+          <p>Para imprimir, abre este archivo (<code>sanson.html</code>) en tu computadora con Chrome o Edge y presiona <strong>Ctrl + P</strong>. Cada hoja sale en su propia página. Marca la casilla de abajo si solo quieres imprimir las hojas, sin la guía del maestro.</p>
+          <label class="toggle" for="solo-hojas"><input type="checkbox" id="solo-hojas"> Imprimir solo las hojas de los niños</label>
+        </div>
+      </div>
+
+      <!-- Hoja 1: Colorear -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Sansón · Jueces 16</span></div>
+        <h3>¡Colorea a Sansón!</h3>
+        <p class="sub">Sansón oró y Dios le dio fuerza para empujar las columnas.</p>
+        <div class="art">
+          <svg viewBox="0 0 600 720" role="img" aria-label="Dibujo para colorear de Sansón empujando dos columnas" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+            <!-- techo -->
+            <rect x="10" y="40" width="580" height="50" />
+            <path d="M110 40 v50 M230 40 v50 M370 40 v50 M490 40 v50" fill="none" />
+            <!-- columna izquierda -->
+            <rect x="25" y="90" width="120" height="32" />
+            <rect x="40" y="122" width="90" height="478" />
+            <path d="M62 132 v458 M85 132 v458 M108 132 v458" fill="none" stroke-width="2" />
+            <rect x="25" y="600" width="120" height="40" />
+            <path d="M58 300 l14 22 l-16 18 l14 24" fill="none" stroke-width="3" />
+            <!-- columna derecha -->
+            <rect x="455" y="90" width="120" height="32" />
+            <rect x="470" y="122" width="90" height="478" />
+            <path d="M492 132 v458 M515 132 v458 M538 132 v458" fill="none" stroke-width="2" />
+            <rect x="455" y="600" width="120" height="40" />
+            <path d="M540 420 l-14 20 l16 20 l-14 22" fill="none" stroke-width="3" />
+            <!-- piso -->
+            <path d="M0 640 H600" fill="none" />
+            <!-- cabello (atrás) -->
+            <path d="M252 215 Q246 168 300 166 Q354 168 348 215 L362 340 Q300 356 238 340 Z" />
+            <path d="M258 250 q-8 30 -6 80 M342 250 q8 30 6 80 M270 290 q-4 25 0 50 M330 290 q4 25 0 50" fill="none" stroke-width="2.5" />
+            <!-- brazos -->
+            <path d="M252 310 L132 248 L132 286 L252 350 Z" />
+            <path d="M348 310 L468 248 L468 286 L348 350 Z" />
+            <!-- túnica -->
+            <path d="M238 302 L362 302 L388 525 L212 525 Z" />
+            <path d="M228 390 L372 390 L374 412 L226 412 Z" />
+            <path d="M300 302 L300 390" fill="none" stroke-width="2.5" />
+            <!-- piernas y sandalias -->
+            <rect x="255" y="525" width="34" height="95" />
+            <rect x="311" y="525" width="34" height="95" />
+            <ellipse cx="268" cy="628" rx="28" ry="11" />
+            <ellipse cx="332" cy="628" rx="28" ry="11" />
+            <!-- cuello y cabeza -->
+            <rect x="287" y="266" width="26" height="40" />
+            <circle cx="300" cy="228" r="46" />
+            <path d="M258 206 Q275 180 300 186 Q325 180 342 206 Q322 196 300 200 Q278 196 258 206 Z" />
+            <!-- cara -->
+            <path d="M279 229 q8 7 16 0 M305 229 q8 7 16 0" fill="none" stroke-width="3" />
+            <path d="M284 252 q16 13 32 0" fill="none" stroke-width="3" />
+            <!-- manos -->
+            <ellipse cx="140" cy="267" rx="15" ry="22" />
+            <ellipse cx="460" cy="267" rx="15" ry="22" />
+            <!-- líneas de esfuerzo -->
+            <path d="M170 210 l-18 -14 M180 196 l-8 -20 M430 210 l18 -14 M420 196 l8 -20" fill="none" stroke-width="3" />
+            <!-- título -->
+            <text x="300" y="700" text-anchor="middle" font-family="'Baloo 2', 'Trebuchet MS', sans-serif" font-size="46" font-weight="800" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="2.5">¡Mi fuerza viene de Dios!</text>
+          </svg>
+        </div>
+      </article>
+
+      <!-- Hoja 2: Laberinto -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Sansón · Jueces 14</span></div>
+        <h3>Ayuda a Sansón a encontrar la miel</h3>
+        <p class="sub">Después de vencer al león con la fuerza de Dios, Sansón encontró un panal de miel. Traza el camino.</p>
+        <div class="art" id="maze"></div>
+      </article>
+
+      <!-- Hoja 3: Sopa de letras -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Sansón · Jueces 13–16</span></div>
+        <h3>Sopa de letras</h3>
+        <p class="sub">Encuentra las palabras de la historia. Están de izquierda a derecha, de arriba hacia abajo o en diagonal. Las letras no llevan tilde.</p>
+        <div class="ws-wrap"><table class="ws" id="sopa"></table></div>
+        <ul class="wordbank" id="sopa-words"></ul>
+      </article>
+
+      <!-- Hoja 4: Ordena la historia -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Sansón · Jueces 13–16</span></div>
+        <h3>Ordena la historia</h3>
+        <p class="sub">Escribe en cada círculo un número del 1 al 6 según el orden en que pasó. Luego haz un dibujito.</p>
+        <div class="order-grid">
+          <div class="order-box"><div class="row"><span class="num"></span><p>Dalila engañó a Sansón y le cortaron las siete trenzas.</p></div><div class="draw"></div></div>
+          <div class="order-box"><div class="row"><span class="num"></span><p>Sansón venció a un león con la fuerza de Dios.</p></div><div class="draw"></div></div>
+          <div class="order-box"><div class="row"><span class="num"></span><p>Sansón oró: «Señor, acuérdate de mí», y empujó las columnas.</p></div><div class="draw"></div></div>
+          <div class="order-box"><div class="row"><span class="num"></span><p>Un ángel anunció que nacería Sansón.</p></div><div class="draw"></div></div>
+          <div class="order-box"><div class="row"><span class="num"></span><p>En la cárcel, el cabello de Sansón volvió a crecer.</p></div><div class="draw"></div></div>
+          <div class="order-box"><div class="row"><span class="num"></span><p>Sansón cargó las puertas de la ciudad de Gaza.</p></div><div class="draw"></div></div>
+        </div>
+      </article>
+
+      <!-- Hoja 5: Versículo y verdadero/falso -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Filipenses 4:13</span></div>
+        <h3>Completa el versículo</h3>
+        <ul class="wordbank"><li>fortalece</li><li>puedo</li><li>Cristo</li></ul>
+        <p class="fill">Todo lo <span class="gap"></span> en <span class="gap"></span><br>que me <span class="gap"></span>.<br><small>Filipenses 4:13</small></p>
+        <h3>¿Verdadero o falso?</h3>
+        <p class="sub">Encierra en un círculo la V si es verdadero o la F si es falso.</p>
+        <ol class="tf">
+          <li><span>1. Sansón nunca debía cortarse el cabello.</span><span class="vf"><span>V</span><span>F</span></span></li>
+          <li><span>2. Sansón venció a un oso.</span><span class="vf"><span>V</span><span>F</span></span></li>
+          <li><span>3. Dalila era una verdadera amiga de Sansón.</span><span class="vf"><span>V</span><span>F</span></span></li>
+          <li><span>4. La fuerza de Sansón venía de Dios.</span><span class="vf"><span>V</span><span>F</span></span></li>
+          <li><span>5. En la cárcel, el cabello de Sansón volvió a crecer.</span><span class="vf"><span>V</span><span>F</span></span></li>
+          <li><span>6. Dios no escuchó la oración de Sansón.</span><span class="vf"><span>V</span><span>F</span></span></li>
+        </ol>
+        <div class="drawbox">Dibuja algo difícil para lo que le pedirás fuerza a Dios esta semana:</div>
+      </article>
+
+      <!-- Hoja 6: Plantilla manualidad -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>Plantilla de la manualidad</span></div>
+        <h3>Mi Sansón de siete trenzas</h3>
+        <p class="sub">Recorta por la línea punteada, dibuja la cara y pega una trenza de lana en cada número.</p>
+        <div class="art" id="plantilla"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- RESPUESTAS -->
+  <section class="part guia" id="respuestas">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Solo para el maestro</p>
+        <h2>Respuestas</h2>
+      </div>
+      <div class="keys">
+        <div class="card">
+          <h3>Sopa de letras</h3>
+          <div class="ws-wrap"><table class="ws key" id="sopa-key"></table></div>
+        </div>
+        <div class="card">
+          <h3>Laberinto</h3>
+          <div id="maze-key"></div>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>Ordena la historia</h3>
+          <p>En el orden en que aparecen los recuadros en la hoja, los números correctos son:</p>
+          <p><strong>4 · 2 · 6 · 1 · 5 · 3</strong></p>
+          <ol>
+            <li>Un ángel anunció que nacería Sansón.</li>
+            <li>Sansón venció a un león.</li>
+            <li>Sansón cargó las puertas de Gaza.</li>
+            <li>Dalila lo engañó y le cortaron las trenzas.</li>
+            <li>En la cárcel, su cabello volvió a crecer.</li>
+            <li>Sansón oró y empujó las columnas.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Versículo y verdadero o falso</h3>
+          <p>Todo lo <strong>puedo</strong> en <strong>Cristo</strong> que me <strong>fortalece</strong>.</p>
+          <p>1 V · 2 F (fue un león) · 3 F · 4 V · 5 V · 6 F</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="guia">
+  <div class="wrap">Preparado para la Escuela Dominical de la Iglesia Catedral de Fe · Citas bíblicas según la Reina-Valera 1960.</div>
+</footer>
+
+<script>
+(function () {
+  function rng(seed) {
+    return function () {
+      seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs, parent) {
+    var el = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(el);
+    return el;
+  }
+
+  /* ---------- Sopa de letras ---------- */
+  var WORDS = [
+    ["COLUMNAS", "Columnas"], ["CABELLO", "Cabello"], ["ORACION", "Oración"],
+    ["SANSON", "Sansón"], ["DALILA", "Dalila"], ["FUERZA", "Fuerza"],
+    ["LEON", "León"], ["MIEL", "Miel"], ["DIOS", "Dios"], ["JUEZ", "Juez"]
+  ];
+  var N = 12, r = rng(2609), grid = [], hits = {};
+  for (var i = 0; i < N; i++) grid.push(new Array(N).fill(null));
+  var DIRS = [[0, 1], [1, 0], [1, 1]];
+  WORDS.forEach(function (w) {
+    var word = w[0];
+    for (var tries = 0; tries < 2000; tries++) {
+      var d = DIRS[Math.floor(r() * DIRS.length)];
+      var maxR = N - (d[0] ? word.length : 1), maxC = N - (d[1] ? word.length : 1);
+      var row = Math.floor(r() * (maxR + 1)), col = Math.floor(r() * (maxC + 1));
+      var ok = true;
+      for (var k = 0; k < word.length; k++) {
+        var c = grid[row + d[0] * k][col + d[1] * k];
+        if (c !== null && c !== word[k]) { ok = false; break; }
+      }
+      if (!ok) continue;
+      for (k = 0; k < word.length; k++) {
+        grid[row + d[0] * k][col + d[1] * k] = word[k];
+        hits[(row + d[0] * k) + "," + (col + d[1] * k)] = true;
+      }
+      break;
+    }
+  });
+  var FILL = "ABCDEFGHIJLMNOPRSTUVZ";
+  for (i = 0; i < N; i++) for (var j = 0; j < N; j++)
+    if (grid[i][j] === null) grid[i][j] = FILL[Math.floor(r() * FILL.length)];
+  function drawGrid(table, key) {
+    grid.forEach(function (row, ri) {
+      var tr = document.createElement("tr");
+      row.forEach(function (ch, ci) {
+        var td = document.createElement("td");
+        td.textContent = ch;
+        if (key && hits[ri + "," + ci]) td.className = "hit";
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+  }
+  drawGrid(document.getElementById("sopa"), false);
+  drawGrid(document.getElementById("sopa-key"), true);
+  var wl = document.getElementById("sopa-words");
+  WORDS.slice().sort(function (a, b) { return a[1].localeCompare(b[1], "es"); }).forEach(function (w) {
+    var li = document.createElement("li"); li.textContent = w[1]; wl.appendChild(li);
+  });
+
+  /* ---------- Laberinto ---------- */
+  var COLS = 10, ROWS = 12, S = 36, OX = 20, OY = 60;
+  var mr = rng(1614);
+  var cells = [];
+  for (var y = 0; y < ROWS; y++) { cells.push([]); for (var x = 0; x < COLS; x++) cells[y].push({ n: 1, e: 1, s: 1, w: 1, v: 0 }); }
+  var stack = [[0, 0]]; cells[0][0].v = 1;
+  while (stack.length) {
+    var cur = stack[stack.length - 1], cy = cur[0], cx = cur[1], opts = [];
+    if (cy > 0 && !cells[cy - 1][cx].v) opts.push(["n", cy - 1, cx, "s"]);
+    if (cy < ROWS - 1 && !cells[cy + 1][cx].v) opts.push(["s", cy + 1, cx, "n"]);
+    if (cx > 0 && !cells[cy][cx - 1].v) opts.push(["w", cy, cx - 1, "e"]);
+    if (cx < COLS - 1 && !cells[cy][cx + 1].v) opts.push(["e", cy, cx + 1, "w"]);
+    if (!opts.length) { stack.pop(); continue; }
+    var o = opts[Math.floor(mr() * opts.length)];
+    cells[cy][cx][o[0]] = 0; cells[o[1]][o[2]][o[3]] = 0; cells[o[1]][o[2]].v = 1;
+    stack.push([o[1], o[2]]);
+  }
+  cells[0][0].n = 0; cells[ROWS - 1][COLS - 1].s = 0;
+
+  // Camino de la solución (BFS)
+  var prev = {}, q = [[0, 0]], seen = { "0,0": 1 };
+  while (q.length) {
+    var p = q.shift(), py = p[0], px = p[1], c = cells[py][px];
+    if (py === ROWS - 1 && px === COLS - 1) break;
+    [["n", -1, 0], ["s", 1, 0], ["w", 0, -1], ["e", 0, 1]].forEach(function (m) {
+      var ny = py + m[1], nx = px + m[2];
+      if (c[m[0]] || ny < 0 || nx < 0 || ny >= ROWS || nx >= COLS || seen[ny + "," + nx]) return;
+      if (m[0] === "n" && py === 0) return;
+      seen[ny + "," + nx] = 1; prev[ny + "," + nx] = py + "," + px; q.push([ny, nx]);
+    });
+  }
+  var path = [], at = (ROWS - 1) + "," + (COLS - 1);
+  while (at) { path.unshift(at.split(",").map(Number)); at = prev[at]; }
+
+  function drawMaze(host, withPath) {
+    var W = COLS * S + OX * 2, H = ROWS * S + OY + 90;
+    var svg = svgEl("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Laberinto" });
+    var g = svgEl("g", { stroke: "#1E1E1E", "stroke-width": 3.5, "stroke-linecap": "round", fill: "none" }, svg);
+    var d = "";
+    for (var y = 0; y < ROWS; y++) for (var x = 0; x < COLS; x++) {
+      var c = cells[y][x], X = OX + x * S, Y = OY + y * S;
+      if (c.n) d += "M" + X + " " + Y + "h" + S;
+      if (c.w) d += "M" + X + " " + Y + "v" + S;
+      if (x === COLS - 1 && c.e) d += "M" + (X + S) + " " + Y + "v" + S;
+      if (y === ROWS - 1 && c.s) d += "M" + X + " " + (Y + S) + "h" + S;
+    }
+    svgEl("path", { d: d }, g);
+    // Inicio
+    svgEl("path", { d: "M" + (OX + S / 2) + " " + (OY - 22) + "v14 m-7 -7 l7 7 l7 -7", stroke: "#1E1E1E", "stroke-width": 3, fill: "none", "stroke-linecap": "round", "stroke-linejoin": "round" }, svg);
+    var t1 = svgEl("text", { x: OX, y: OY - 30, "font-family": "'Baloo 2', 'Trebuchet MS', sans-serif", "font-size": 20, "font-weight": 800, fill: "#1E1E1E" }, svg);
+    t1.textContent = "INICIO: Sansón";
+    // Panal
+    var hx = OX + COLS * S - S / 2, hy = OY + ROWS * S + 40;
+    function hex(cx, cy, rr) {
+      var pts = [];
+      for (var a = 0; a < 6; a++) { var an = Math.PI / 3 * a + Math.PI / 6; pts.push((cx + rr * Math.cos(an)).toFixed(1) + "," + (cy + rr * Math.sin(an)).toFixed(1)); }
+      svgEl("polygon", { points: pts.join(" "), fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 2.5 }, svg);
+    }
+    var hr = 12, hw = hr * Math.sqrt(3);
+    hex(hx, hy, hr); hex(hx - hw, hy, hr); hex(hx - hw / 2, hy + hr * 1.5, hr); hex(hx + hw / 2, hy + hr * 1.5, hr); hex(hx - hw * 1.5, hy + hr * 1.5, hr);
+    var t2 = svgEl("text", { x: hx - hw * 2 - 10, y: hy + 12, "text-anchor": "end", "font-family": "'Baloo 2', 'Trebuchet MS', sans-serif", "font-size": 22, "font-weight": 800, fill: "#1E1E1E" }, svg);
+    t2.textContent = "¡MIEL!";
+    if (withPath) {
+      var pts = path.map(function (p) { return (OX + p[1] * S + S / 2) + "," + (OY + p[0] * S + S / 2); });
+      pts.unshift((OX + S / 2) + "," + (OY - 6));
+      pts.push((OX + (COLS - 1) * S + S / 2) + "," + (OY + ROWS * S + 16));
+      svgEl("polyline", { points: pts.join(" "), fill: "none", stroke: "#E0A100", "stroke-width": 7, "stroke-linecap": "round", "stroke-linejoin": "round", opacity: .85 }, svg);
+    }
+    host.appendChild(svg);
+  }
+  drawMaze(document.getElementById("maze"), false);
+  drawMaze(document.getElementById("maze-key"), true);
+
+  /* ---------- Plantilla de la manualidad ---------- */
+  (function () {
+    var host = document.getElementById("plantilla");
+    var svg = svgEl("svg", { viewBox: "0 0 600 720", role: "img", "aria-label": "Plantilla de la cabeza de Sansón con siete puntos para pegar trenzas" });
+    var cx = 300, cy = 290, R = 210;
+    svgEl("circle", { cx: cx, cy: cy, r: R + 22, fill: "none", stroke: "#1E1E1E", "stroke-width": 2, "stroke-dasharray": "10 8" }, svg);
+    svgEl("circle", { cx: cx, cy: cy, r: R, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 3.5 }, svg);
+    svgEl("ellipse", { cx: cx - R + 4, cy: cy + 10, rx: 18, ry: 32, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 3 }, svg);
+    svgEl("ellipse", { cx: cx + R - 4, cy: cy + 10, rx: 18, ry: 32, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 3 }, svg);
+    for (var k = 0; k < 7; k++) {
+      var ang = Math.PI + (Math.PI / 6) * k; // de 180° a 360°: la mitad de arriba
+      var px = cx + (R - 26) * Math.cos(ang), py = cy + (R - 26) * Math.sin(ang);
+      svgEl("circle", { cx: px.toFixed(1), cy: py.toFixed(1), r: 16, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 2.5 }, svg);
+      var t = svgEl("text", { x: px.toFixed(1), y: (py + 7).toFixed(1), "text-anchor": "middle", "font-family": "'Baloo 2', 'Trebuchet MS', sans-serif", "font-size": 20, "font-weight": 800, fill: "#1E1E1E" }, svg);
+      t.textContent = k + 1;
+    }
+    var tc = svgEl("text", { x: cx, y: cy + 20, "text-anchor": "middle", "font-family": "'Atkinson Hyperlegible', sans-serif", "font-size": 20, fill: "#9A9A9A" }, svg);
+    tc.textContent = "Dibuja aquí la cara de Sansón";
+    svgEl("rect", { x: 40, y: 560, width: 520, height: 110, rx: 14, fill: "none", stroke: "#1E1E1E", "stroke-width": 2, "stroke-dasharray": "10 8" }, svg);
+    var tv = svgEl("text", { x: 300, y: 630, "text-anchor": "middle", "font-family": "'Baloo 2', 'Trebuchet MS', sans-serif", "font-size": 44, "font-weight": 800, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 2 }, svg);
+    tv.textContent = "¡Mi fuerza viene de Dios!";
+    var ts = svgEl("text", { x: 300, y: 700, "text-anchor": "middle", "font-family": "'Atkinson Hyperlegible', sans-serif", "font-size": 18, fill: "#1E1E1E" }, svg);
+    ts.textContent = "Filipenses 4:13";
+    host.appendChild(svg);
+  })();
+
+  /* ---------- Imprimir solo las hojas ---------- */
+  var box = document.getElementById("solo-hojas");
+  box.addEventListener("change", function () { document.body.classList.toggle("solo-hojas", box.checked); });
+})();
+</script>

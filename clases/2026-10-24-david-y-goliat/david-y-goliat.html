@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David y Goliat</title>
+<meta name="description" content="Clase de Escuela Dominical sobre David y Goliat para niños de 6 a 9 años: guía del maestro, juegos con movimiento, manualidad y hojas imprimibles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  :root {
+    --ground: #FFFCF6;
+    --surface: #FFFFFF;
+    --ink: #241C3B;
+    --muted: #625A78;
+    --line: #E9E1D2;
+    --honey: #F2B632;
+    --honey-ink: #9A5B00;
+    --honey-wash: #FFF1CC;
+    --olive: #4D6A2A;
+    --olive-wash: #EAF1DD;
+    --indigo: #3B2F7A;
+    --indigo-wash: #ECE9FA;
+    --paper: #FFFFFF;
+    --paper-ink: #1E1E1E;
+    --shadow: 0 1px 2px rgba(36, 28, 59, .06), 0 6px 20px rgba(36, 28, 59, .06);
+    --display: "Baloo 2", "Trebuchet MS", "Segoe UI", sans-serif;
+    --body: "Atkinson Hyperlegible", "Segoe UI", Verdana, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ground: #17132A;
+      --surface: #211B39;
+      --ink: #F2EEFF;
+      --muted: #B4ABD2;
+      --line: #3A3359;
+      --honey: #F2B632;
+      --honey-ink: #F6C65A;
+      --honey-wash: #3A2E14;
+      --olive: #AFCB7E;
+      --olive-wash: #25301A;
+      --indigo: #C9C0FF;
+      --indigo-wash: #2C2552;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 20px rgba(0, 0, 0, .25);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --ground: #17132A;
+    --surface: #211B39;
+    --ink: #F2EEFF;
+    --muted: #B4ABD2;
+    --line: #3A3359;
+    --honey: #F2B632;
+    --honey-ink: #F6C65A;
+    --honey-wash: #3A2E14;
+    --olive: #AFCB7E;
+    --olive-wash: #25301A;
+    --indigo: #C9C0FF;
+    --indigo-wash: #2C2552;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 20px rgba(0, 0, 0, .25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding-inline: 20px; }
+  h1, h2, h3, h4 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+  h2 { font-size: 2rem; font-weight: 800; }
+  h3 { font-size: 1.35rem; font-weight: 800; }
+  h4 { font-size: 1.1rem; font-weight: 600; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding-left: 1.3em; }
+  li + li { margin-top: .3em; }
+  a { color: var(--indigo); }
+  a:focus-visible, input:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+
+  /* Portada */
+  .top { padding-block: 40px 28px; }
+  .eyebrow {
+    font-size: .8rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700;
+  }
+  .top h1 { font-size: clamp(2.3rem, 7vw, 3.6rem); font-weight: 800; margin-top: 8px; }
+  .top h1 span { color: var(--honey-ink); }
+  .lead { font-size: 1.15rem; max-width: 60ch; margin-top: 12px; color: var(--muted); }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .fact {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 8px 14px; display: flex; flex-direction: column;
+  }
+  .fact b { font-family: var(--display); font-size: 1.1rem; }
+  .fact small { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+
+  /* Navegación */
+  nav.jump {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--ground); border-bottom: 1px solid var(--line);
+  }
+  nav.jump .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px; }
+  nav.jump a {
+    white-space: nowrap; text-decoration: none; color: var(--ink);
+    font-weight: 700; font-size: .92rem; padding: 6px 12px; border-radius: 999px;
+  }
+  nav.jump a:hover { background: var(--honey-wash); }
+
+  /* Secciones */
+  main section.part { padding-block: 44px 8px; scroll-margin-top: 56px; }
+  .part-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .part-head p { color: var(--muted); max-width: 62ch; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card.lift { box-shadow: var(--shadow); }
+  .verse {
+    background: var(--indigo-wash); border-radius: 16px; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .verse q { font-family: var(--display); font-size: 1.7rem; font-weight: 800; line-height: 1.2; quotes: "“" "”"; color: var(--indigo); }
+  .verse cite { font-style: normal; font-weight: 700; }
+  .truth { background: var(--honey-wash); border-radius: 16px; padding: 18px 22px; }
+  .truth b { font-family: var(--display); font-size: 1.3rem; display: block; }
+  .label {
+    font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--muted);
+  }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding-left: 1.6em; position: relative; }
+  .checklist li::before {
+    content: ""; position: absolute; left: 0; top: .28em; width: 1em; height: 1em;
+    border: 2px solid var(--muted); border-radius: 4px;
+  }
+
+  /* Plan */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+  table.plan { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .95rem; }
+  table.plan th, table.plan td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.plan tr:last-child td { border-bottom: 0; }
+  table.plan th { font-size: .75rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+  table.plan td.t { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+  table.plan td b { font-family: var(--display); font-size: 1.05rem; }
+  .tip { border-left: 4px solid var(--olive); background: var(--olive-wash); padding: 12px 16px; border-radius: 0 10px 10px 0; }
+  .tip b { color: var(--olive); }
+
+  /* Historia */
+  .scene { display: grid; grid-template-columns: 44px 1fr; gap: 14px; }
+  .scene-n {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--honey); color: #2A1E00;
+    font-family: var(--display); font-weight: 800; font-size: 1.3rem;
+    display: grid; place-items: center;
+  }
+  .scene-body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .scene-body .ref { color: var(--muted); font-size: .88rem; font-weight: 700; }
+  .story p { max-width: 66ch; }
+  .cue {
+    display: inline; background: var(--indigo-wash); color: var(--indigo);
+    border-radius: 6px; padding: 1px 7px; font-size: .88em; font-weight: 700;
+  }
+  .ask { font-weight: 700; }
+  .ask::before { content: "Pregunta: "; color: var(--honey-ink); }
+  .note { font-size: .92rem; color: var(--muted); font-style: italic; }
+
+  /* Juegos */
+  .game-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill {
+    font-size: .78rem; font-weight: 700; padding: 2px 10px; border-radius: 999px;
+    background: var(--honey-wash); color: var(--honey-ink);
+  }
+  .pill.o { background: var(--olive-wash); color: var(--olive); }
+  .qa { counter-reset: q; list-style: none; padding: 0; display: grid; gap: 8px; }
+  .qa li { counter-increment: q; display: grid; grid-template-columns: 2em 1fr; margin: 0; }
+  .qa li::before { content: counter(q) "."; font-weight: 700; color: var(--honey-ink); }
+  .qa li span { color: var(--muted); }
+  .cups { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 4px; }
+  .cups div { display: flex; gap: 4px; }
+  .cups span {
+    font-size: .78rem; font-weight: 700; background: var(--surface); border: 2px solid var(--honey);
+    border-radius: 4px 4px 12px 12px; padding: 6px 8px; min-width: 64px; text-align: center;
+  }
+
+  /* Hojas imprimibles */
+  .print-note { display: flex; flex-direction: column; gap: 10px; }
+  .toggle { display: flex; gap: 10px; align-items: center; font-weight: 700; cursor: pointer; }
+  .toggle input { width: 20px; height: 20px; accent-color: var(--olive); }
+  .hoja {
+    background: var(--paper); color: var(--paper-ink);
+    border: 1px solid var(--line); border-radius: 6px; box-shadow: var(--shadow);
+    padding: 28px 30px; display: flex; flex-direction: column; gap: 16px;
+    font-family: var(--body);
+  }
+  .hoja-top { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: .95rem; }
+  .hoja-top .blank { display: inline-block; min-width: 180px; border-bottom: 2px solid #999; }
+  .hoja h3 { font-size: 1.9rem; text-align: center; color: var(--paper-ink); }
+  .hoja .sub { text-align: center; font-size: 1.05rem; }
+  .hoja svg { width: 100%; height: auto; display: block; }
+  .art { max-width: 520px; margin: 0 auto; width: 100%; }
+  .ws-wrap { overflow-x: auto; }
+  table.ws { border-collapse: collapse; margin: 0 auto; }
+  table.ws td {
+    width: 2.2em; height: 2.2em; text-align: center; font-family: var(--display);
+    font-weight: 800; font-size: 1.25rem; border: 1px solid #CFCFCF; color: #1E1E1E; padding: 0;
+  }
+  table.ws.key td { width: 1.6em; height: 1.6em; font-size: .9rem; }
+  table.ws.key td.hit { background: #FFE08A; }
+  .wordbank { display: flex; flex-wrap: wrap; gap: 8px 10px; justify-content: center; list-style: none; padding: 0; }
+  .wordbank li { margin: 0; border: 2px solid #1E1E1E; border-radius: 999px; padding: 2px 14px; font-weight: 700; }
+  .order-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .order-box { border: 2px dashed #888; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-height: 170px; }
+  .order-box .num { width: 38px; height: 38px; border: 2px solid #1E1E1E; border-radius: 50%; flex: none; }
+  .order-box .row { display: flex; gap: 10px; align-items: flex-start; }
+  .order-box .draw { flex: 1; border-top: 1px solid #DDD; margin-top: 4px; }
+  .fill { font-size: 1.35rem; line-height: 2.4; text-align: center; font-family: var(--display); font-weight: 600; }
+  .fill .gap { display: inline-block; min-width: 130px; border-bottom: 2px solid #1E1E1E; }
+  .tf { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .tf li { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; margin: 0; font-size: 1.05rem; }
+  .tf .vf { display: flex; gap: 8px; font-family: var(--display); font-weight: 800; }
+  .tf .vf span { width: 34px; height: 34px; border: 2px solid #1E1E1E; border-radius: 50%; display: grid; place-items: center; }
+  .drawbox { border: 2px solid #1E1E1E; border-radius: 12px; min-height: 220px; padding: 10px; font-weight: 700; }
+  .keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+  footer { padding-block: 40px; color: var(--muted); font-size: .9rem; }
+
+  @media (max-width: 520px) {
+    .hoja { padding: 18px 14px; }
+    table.ws td { width: 1.7em; height: 1.7em; font-size: 1rem; }
+    .scene { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { scroll-behavior: smooth; }
+
+  /* Impresión */
+  @page { margin: 12mm; }
+  @media print {
+    :root:not(#_), :root[data-theme]:not(#_) {
+      color-scheme: light;
+      --ground: #FFFFFF; --surface: #FFFFFF; --ink: #1E1E1E; --muted: #555555; --line: #CCCCCC;
+      --honey-ink: #7A4800; --honey-wash: #FFF4D6; --olive: #3E5A1E; --olive-wash: #F0F5E8;
+      --indigo: #2E2466; --indigo-wash: #F1EFFA; --shadow: none;
+    }
+    body { font-size: 12pt; }
+    nav.jump, .no-print { display: none !important; }
+    .wrap { max-width: none; padding-inline: 0; }
+    main section.part { padding-block: 0; }
+    .part { break-before: page; }
+    #resumen { break-before: auto; }
+    .card, .scene, .verse, .truth, .tip, tr { break-inside: avoid; }
+    .hoja { break-before: page; border: 0; border-radius: 0; box-shadow: none; padding: 0; gap: 12px; }
+    .hoja .art { max-width: 165mm; }
+    #hojas .part-head { display: none; }
+    body.solo-hojas .guia { display: none !important; }
+    body.solo-hojas .hoja:first-of-type { break-before: auto; }
+  }
+
+  /* Específico de esta clase */
+  .poses { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .pose { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--surface); }
+  .pose b { font-family: var(--display); font-size: 1.15rem; display: block; color: var(--honey-ink); }
+  .script { background: var(--indigo-wash); border-radius: 12px; padding: 14px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .script b { color: var(--indigo); }
+  .stones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 14px; }
+  .stones svg { width: 100%; height: auto; display: block; }
+  table.who { border-collapse: collapse; width: 100%; font-size: 1.05rem; }
+  table.who th, table.who td { border: 1.5px solid #1E1E1E; padding: 6px 10px; }
+  table.who th { font-family: var(--display); font-size: 1.1rem; text-align: center; }
+  table.who td.box { width: 74px; }
+  table.who td.mark { text-align: center; font-weight: 800; }
+  .giant-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .giant-box .drawbox { min-height: 260px; }
+  @media (max-width: 520px) { .giant-box { grid-template-columns: 1fr; } table.who td.box { width: 44px; } }
+  @media print {
+    #maze { max-width: 135mm; }
+    .stones { max-width: 175mm; margin: 0 auto; width: 100%; }
+    .giant-box .drawbox { min-height: 95mm; }
+    table.who td { padding: 9px 10px; }
+  }
+</style>
+
+<div class="guia">
+  <header class="top">
+    <div class="wrap">
+      <p class="eyebrow">Escuela Dominical · Iglesia Catedral de Fe · Niños de 6 a 9 años · Sábado 24 de octubre</p>
+      <h1>David y Goliat: <span>¡la batalla es del Señor!</span></h1>
+      <p class="lead">Una clase de hora y media con mucho movimiento: los niños forman dos equipos de pastores, conocen a Goliat «en persona», se prueban la armadura de Saúl y terminan derribando a su propio gigante.</p>
+      <div class="facts">
+        <div class="fact"><small>Pasaje</small><b>1 Samuel 17</b></div>
+        <div class="fact"><small>Versículo</small><b>1 Samuel 17:47</b></div>
+        <div class="fact"><small>Duración</small><b>90 minutos</b></div>
+        <div class="fact"><small>Edades</small><b>6 a 9 años</b></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="jump" aria-label="Secciones">
+    <div class="wrap">
+      <a href="#resumen">Resumen</a>
+      <a href="#trucos">Para que no se aburran</a>
+      <a href="#plan">Plan de clase</a>
+      <a href="#historia">Historia</a>
+      <a href="#juegos">Juegos</a>
+      <a href="#manualidad">Manualidad</a>
+      <a href="#hojas">Hojas imprimibles</a>
+      <a href="#respuestas">Respuestas</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <!-- RESUMEN -->
+  <section class="part guia" id="resumen">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro</p>
+        <h2>Resumen de la clase</h2>
+      </div>
+
+      <div class="truth">
+        <span class="label">Verdad central</span>
+        <b>Dios es más grande que cualquier gigante. Aunque seamos pequeños, podemos ser valientes porque Dios pelea por nosotros.</b>
+      </div>
+
+      <div class="verse">
+        <span class="label">Versículo para memorizar</span>
+        <q>La batalla es del Señor.</q>
+        <cite>1 Samuel 17:47</cite>
+      </div>
+
+      <div class="card">
+        <h3>Cuatro puntos principales</h3>
+        <ul>
+          <li><strong>David no dejó que su tamaño lo detuviera.</strong> Nunca somos demasiado pequeños para que Dios nos use.</li>
+          <li><strong>David recordó que Dios es más grande que cualquier gigante.</strong></li>
+          <li><strong>David no podía usar la armadura de otro.</strong> Dios nos hizo únicos y nos da lo que necesitamos.</li>
+          <li><strong>David recordó la fidelidad de Dios:</strong> si Dios lo ayudó con el león y el oso, lo ayudaría otra vez.</li>
+        </ul>
+        <p class="note">Puntos tomados de la lección 33 de True Way Kids.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3>Objetivos</h3>
+          <p>Al terminar la clase, los niños podrán:</p>
+          <ul>
+            <li>Contar con sus palabras cómo David venció a Goliat.</li>
+            <li>Explicar que David ganó porque confió en Dios, no por ser grande o fuerte.</li>
+            <li>Nombrar un «gigante» (un miedo o un problema) y decir que Dios es más grande.</li>
+            <li>Decir de memoria «La batalla es del Señor» (1 Samuel 17:47).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Materiales</h3>
+          <ul class="checklist">
+            <li>Biblia (marca 1 Samuel 17)</li>
+            <li>Un ovillo de lana o cinta de embalaje (para medir 2,90 m)</li>
+            <li>Disfraz de Goliat: un balde u olla como casco, una tapa o cartón como escudo, un palo de escoba como lanza</li>
+            <li>Una canasta con pan (y, si quieres, un trozo de queso)</li>
+            <li>5 piedras lisas reales y una honda (puede ser un calcetín o una tira de tela)</li>
+            <li>2 juegos de «armadura» grande: camisa o saco de adulto, balde o casco, zapatos o botas grandes</li>
+            <li>La cara de Goliat impresa (página 10 del PDF de True Way Kids) y cinta adhesiva</li>
+            <li>Hojas de papel reciclado para hacer bolitas</li>
+            <li>Bolsas de papel o sobres manila (uno por niño), lana y perforador</li>
+            <li>Las 5 piedras del versículo en tamaño grande (dibújalas en cartulina gris)</li>
+            <li>Dos bolsitas para los puntos de los equipos y unas 30 piedritas o bolitas de papel gris</li>
+            <li>Crayolas, plumones, goma, tijeras de punta roma</li>
+            <li>Copias de las hojas imprimibles</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Antes del sábado</h3>
+        <ul class="checklist">
+          <li>Lee 1 Samuel 17 completo para conocer bien la historia.</li>
+          <li>Pide a un ayudante (o a un papá) que sea «Goliat». Dale el guion de la sección Historia. Si no hay ayudante, tú haces la voz de Goliat detrás de una puerta.</li>
+          <li>Pega en la pared, a unos 2,90 m de alto (o lo más alto que puedas), la cara de Goliat.</li>
+          <li>Esconde en el salón las 5 piedras grandes del versículo.</li>
+          <li>Imprime las piedras del versículo para la manualidad (en cartulina gris si puedes) y perfora las bolsas.</li>
+          <li>Pon en una bolsa de tela la honda y las 5 piedras lisas: será la «bolsa misteriosa» del inicio.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUCOS -->
+  <section class="part guia" id="trucos">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro</p>
+        <h2>Para que no se aburran</h2>
+        <p>A los 6–9 años la atención dura unos 8 a 10 minutos. Esta clase cambia de actividad cada vez que se acaba ese tiempo, y usa estos cinco recursos durante toda la hora y media.</p>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>1. Señal de silencio</h3>
+          <p>Tú preguntas fuerte: <strong>«¿De quién es la batalla?»</strong> y ellos responden: <strong>«¡Del Señor!»</strong>, y se quedan callados. Ensáyenlo al principio. Así repasan el versículo veinte veces sin darse cuenta.</p>
+        </div>
+        <div class="card">
+          <h3>2. Dos equipos: Leones y Osos</h3>
+          <p>Los animales que David venció. Cada equipo gana piedritas en su bolsa por responder, participar y portarse bien. Que los puntos se vean: muéstralos cada vez que los das.</p>
+        </div>
+        <div class="card">
+          <h3>3. Las poses</h3>
+          <p>Las mismas cinco poses sirven para calentar, para contar la historia y para repasar. Los niños las aprenden en el primer minuto y se mueven aunque estén escuchando.</p>
+        </div>
+        <div class="card">
+          <h3>4. Misterio</h3>
+          <p>La bolsa misteriosa del inicio no se abre hasta la historia. Goliat «llega» sin aviso. Las piedras del versículo están escondidas. Siempre hay algo por descubrir.</p>
+        </div>
+        <div class="card">
+          <h3>5. Trabajos para los inquietos</h3>
+          <p>El niño más inquieto puede cargar la canasta de David, llevar la lanza de Goliat o repartir los puntos. Con una tarea, su energía ayuda a la clase.</p>
+        </div>
+        <div class="card">
+          <h3>Al final: todos ganan</h3>
+          <p>Cuenta los puntos con suspenso y pregunta: «¿Quién ganó?». Ellos gritan: «¡La batalla es del Señor!». Los dos equipos reciben el premio.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Las cinco poses</h3>
+        <div class="poses">
+          <div class="pose"><b>¡David!</b>Agacharse o arrodillarse: David era pequeño.</div>
+          <div class="pose"><b>¡Goliat!</b>De puntillas con los brazos arriba: ¡era enorme!</div>
+          <div class="pose"><b>¡Saúl!</b>Manos sobre la cabeza como una corona.</div>
+          <div class="pose"><b>¡Ovejas!</b>A gatas, diciendo «¡beee!».</div>
+          <div class="pose"><b>¡Honda!</b>Girar el brazo sobre la cabeza: «¡zum, zum, zum!».</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN -->
+  <section class="part guia" id="plan">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro</p>
+        <h2>Plan de clase, minuto a minuto</h2>
+        <p>Ningún bloque dura más de 10 minutos sentados, salvo la historia, que es actuada y tiene a los niños moviéndose.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="plan">
+          <thead><tr><th>Tiempo</th><th>Actividad</th><th>Qué hacer</th></tr></thead>
+          <tbody>
+            <tr><td class="t">0:00–0:10</td><td><b>Campamento de pastores</b></td><td>Bienvenida y equipos Leones y Osos. Enseña la señal de silencio y las cinco poses. Juego «Entrenamiento de pastores». Muestra la bolsa misteriosa: un voluntario la toca sin mirar e intenta adivinar.</td></tr>
+            <tr><td class="t">0:10–0:17</td><td><b>Alabanza y oración</b></td><td>Canten «El guerrero David» y «David y Goliat» (Alaba Kids), con mímica. Oración de apertura.</td></tr>
+            <tr><td class="t">0:17–0:24</td><td><b>¿Qué tan grande era Goliat?</b></td><td>Mide 2,90 m con la lana. Los niños se acuestan uno tras otro para ver cuántos niños hacen falta para un Goliat.</td></tr>
+            <tr><td class="t">0:24–0:42</td><td><b>Historia actuada</b></td><td>Cuenta 1 Samuel 17 con las poses. ¡Goliat entra al salón! Abre la bolsa misteriosa cuando David elige sus piedras.</td></tr>
+            <tr><td class="t">0:42–0:50</td><td><b>Carrera de la armadura</b></td><td>Relevos con ropa de adulto. Luego, una ronda «como David», sin armadura.</td></tr>
+            <tr><td class="t">0:50–0:57</td><td><b>¿David, Saúl o Goliat?</b></td><td>Repaso con poses: lees una frase y todos hacen la pose del personaje. Puntos para los equipos.</td></tr>
+            <tr><td class="t">0:57–1:12</td><td><b>Manualidad</b></td><td>Bolsa de pastor con las cinco piedras del versículo.</td></tr>
+            <tr><td class="t">1:12–1:20</td><td><b>Las cinco piedras</b></td><td>Los equipos buscan las piedras grandes escondidas, las ordenan y dicen el versículo. Cada vez se quita una piedra.</td></tr>
+            <tr><td class="t">1:20–1:30</td><td><b>Derriba a tu gigante</b></td><td>Cada niño hace una bolita con su «gigante» y la lanza a la cara de Goliat gritando el versículo. Conteo de puntos (¡todos ganan!) y oración final.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip"><b>Si sobra tiempo:</b> «Historia de plastilina», «Dios es más grande que…» o el Goliat derribable de True Way Kids (ver Juegos). Las hojas imprimibles pueden ir a casa.</div>
+      <div class="tip"><b>Material de True Way Kids:</b> del <a href="https://files.truewaykids.com/file/bitdvi0mejwnp1r/OT33+David+y+Goliat+5+.pdf/file">paquete de David y Goliat para 5+</a> imprime la cara de Goliat (página 10) para el tiro al gigante. También sirven el crucigrama (página 7), «Encuentra 10 diferencias» (página 6), «Derribar a Goliat» (página 12) y los dibujos para colorear (páginas 13 a 15).</div>
+      <div class="tip"><b>Edades mezcladas:</b> en los relevos y en la búsqueda de piedras, cada equipo debe tener niños grandes y pequeños. Los de 8–9 años leen las frases del repaso; los de 6–7 hacen el laberinto en vez de la hoja de escribir.</div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="part guia story" id="historia">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Guía del maestro · 18 minutos</p>
+        <h2>La historia de David y Goliat, actuada</h2>
+        <p>Cuéntala de pie, con mucha emoción. Cada vez que digas <strong>David</strong>, <strong>Goliat</strong> o <strong>Saúl</strong>, los niños hacen la pose. Las indicaciones <span class="cue">en morado</span> son acciones para ti o para los niños.</p>
+      </div>
+
+      <div class="script">
+        <span class="label">Guion para el ayudante que hace de Goliat</span>
+        <p><b>Al entrar (escena 2):</b> «¡JA, JA, JA! ¡Soy Goliat, el gigante de los filisteos! ¿Por qué no vienen a pelear? ¡Elijan a un hombre para que pelee conmigo!»</p>
+        <p><b>Cuando la maestra cuenta los 40 días:</b> repite «¡Envíen a un hombre!» cada vez más aburrido.</p>
+        <p><b>Cuando llega David (escena 6):</b> «¿Un niño? ¿Me mandan a un niño con palitos? ¡JA, JA, JA!»</p>
+        <p><b>Cuando la piedra lo golpea:</b> se toca la frente, se tambalea en cámara lenta y cae sobre un cojín. ¡PUM!</p>
+        <p class="note">Si no hay ayudante, haz tú la voz de Goliat desde detrás de una puerta o de una sábana colgada.</p>
+      </div>
+
+      <div class="card">
+        <h4>Para empezar</h4>
+        <p>«¿Alguna vez han tenido miedo de algo muy, muy grande? <span class="cue">Deja que respondan</span> Hoy vamos a conocer a un niño que tuvo que enfrentarse a algo MUCHO más grande que él. Y en esta bolsa misteriosa <span class="cue">Muéstrala</span> está lo que usó. No la vamos a abrir todavía…»</p>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">1</div>
+        <div class="scene-body">
+          <h3>Dos ejércitos y un valle</h3>
+          <p class="ref">1 Samuel 17:1–3</p>
+          <p>Los filisteos, un pueblo que no adoraba al Dios verdadero, querían atacar a Israel. Así que el rey <strong>Saúl</strong> <span class="cue">Pose de Saúl</span> reunió a su ejército para defender su país.</p>
+          <p>Los filisteos acamparon en una colina, y los israelitas en otra. En medio había un valle. <span class="cue">Separa a los dos equipos a cada lado del salón: ¡son el ejército de Israel!</span></p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">2</div>
+        <div class="scene-body">
+          <h3>¡Aparece Goliat!</h3>
+          <p class="ref">1 Samuel 17:4–11, 16</p>
+          <p>De pronto, del campamento filisteo salió un soldado enorme… <span class="cue">¡Entra Goliat!</span> Se llamaba <strong>Goliat</strong> <span class="cue">Pose de Goliat</span>. ¿Se acuerdan de lo que medimos con la lana? ¡Medía casi tres metros! Su armadura pesaba tanto como dos niños de su edad juntos, y solo la punta de su lanza pesaba como siete kilos de arroz.</p>
+          <p>Goliat gritaba: «¡Elijan a un hombre para que pelee conmigo! Si me gana, seremos sus siervos. Pero si yo gano, ¡ustedes serán nuestros siervos!».</p>
+          <p>El rey <strong>Saúl</strong> y todos sus soldados tenían mucho miedo. <span class="cue">Todos tiemblan: «¡Ay, ay, ay!»</span> Y Goliat gritaba en la mañana y en la tarde, todos los días… <span class="cue">Cuenten rápido: «¡Día 1, día 2, día 3… día 40!»</span> ¡Cuarenta días! Y nadie se atrevía a pelear.</p>
+          <p class="ask">¿Ustedes habrían salido a pelear con Goliat?</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">3</div>
+        <div class="scene-body">
+          <h3>David lleva comida</h3>
+          <p class="ref">1 Samuel 17:12–30</p>
+          <p>Mientras tanto, en Belén, había un muchacho que cuidaba las <strong>ovejas</strong> <span class="cue">Pose de ovejas: «¡beee!»</span> de su papá. Se llamaba <strong>David</strong> <span class="cue">Pose de David</span>. Era el menor de los hermanos, y era muy joven para ir a la guerra. Sus tres hermanos mayores sí estaban en el ejército.</p>
+          <p>Un día, su papá Isaí le dijo: «Lleva este grano tostado y diez panes a tus hermanos, y estos diez quesos al capitán». <span class="cue">Un voluntario lleva la canasta por todo el salón</span></p>
+          <p>Cuando David llegó, escuchó a Goliat gritar y vio que todos huían de miedo. David dijo: <strong>«¿Quién es este filisteo para desafiar al ejército del Dios viviente?»</strong></p>
+          <p>Su hermano mayor se enojó: «¿Qué haces aquí? ¡Vuelve con tus ovejas!». Pero David no se rindió.</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">4</div>
+        <div class="scene-body">
+          <h3>El león y el oso</h3>
+          <p class="ref">1 Samuel 17:31–37</p>
+          <p>Llevaron a David ante el rey <strong>Saúl</strong>. David dijo: «¡Que nadie tenga miedo! Yo iré a pelear con él».</p>
+          <p>Saúl le dijo: «No puedes. Tú eres un muchacho, y él es soldado desde joven».</p>
+          <p>Pero David respondió: «Yo cuido las ovejas de mi padre. Cuando vino un león… <span class="cue">Los Leones rugen: «¡GRRR!»</span> y cuando vino un oso… <span class="cue">Los Osos gruñen y levantan las garras</span> los vencí para salvar a las ovejas. <strong>El Señor, que me libró del león y del oso, me librará de este filisteo</strong>».</p>
+          <p>Saúl le dijo: «Ve, y que el Señor esté contigo».</p>
+          <p class="ask">¿Por qué David estaba tan seguro? (Porque recordaba lo que Dios ya había hecho por él.)</p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">5</div>
+        <div class="scene-body">
+          <h3>La armadura de Saúl</h3>
+          <p class="ref">1 Samuel 17:38–40</p>
+          <p>Saúl le puso a David su propia armadura: un casco de bronce, una coraza y una espada. <span class="cue">Ponle a un voluntario la camisa grande, el balde y los zapatos grandes, y pídele que camine</span> ¿Cómo se ve? ¡No puede ni caminar!</p>
+          <p>David dijo: «No puedo andar con esto, no estoy acostumbrado». Y se la quitó. Tomó su cayado, su honda… y fue al arroyo a escoger <strong>cinco piedras lisas</strong>.</p>
+          <p><span class="cue">¡Abre la bolsa misteriosa! Saca la honda y las piedras y cuéntenlas juntos: «¡1, 2, 3, 4, 5!»</span></p>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-n">6</div>
+        <div class="scene-body">
+          <h3>¡La batalla es del Señor!</h3>
+          <p class="ref">1 Samuel 17:41–52</p>
+          <p><strong>Goliat</strong> vio a <strong>David</strong> y se rio: «¿Soy un perro para que vengas a mí con palos?». <span class="cue">Goliat se burla</span></p>
+          <p>Pero David le dijo con valentía: <strong>«Tú vienes contra mí con espada y lanza, pero yo vengo en el nombre del Señor Todopoderoso… ¡porque la batalla es del Señor!»</strong> <span class="cue">Todos repiten: «¡La batalla es del Señor!»</span></p>
+          <p>Goliat avanzó. David corrió hacia él, puso una piedra en su <strong>honda</strong> <span class="cue">Pose de honda: «¡zum, zum, zum!»</span> y la lanzó… <span class="cue">Todos en cámara lenta, en silencio…</span> ¡La piedra le dio a Goliat en la frente y cayó al suelo! ¡PUM! <span class="cue">Goliat cae sobre el cojín; todos saltan y celebran</span></p>
+          <p>Los filisteos huyeron, y el ejército de Israel ganó. ¡Dios había vencido al gigante usando a un muchacho con una honda y una piedra!</p>
+          <p class="note">Nota para el maestro: 1 Samuel 17:51 cuenta que después David le cortó la cabeza a Goliat. Para esta edad basta con decir que Goliat cayó y fue vencido. Si algún niño lo pregunta, dilo con calma y sin detalles.</p>
+        </div>
+      </div>
+
+      <div class="card lift">
+        <h3>¿Qué aprendemos de David?</h3>
+        <ul>
+          <li><strong>Nunca eres demasiado pequeño para Dios.</strong> Todos pensaban que David era muy chico, pero Dios lo usó.</li>
+          <li><strong>Dios es más grande que cualquier gigante:</strong> el miedo a la oscuridad, un examen difícil, un niño que te molesta, estar enfermo.</li>
+          <li><strong>No tienes que ser como otro.</strong> La armadura de Saúl no le servía a David. Dios te hizo a ti, con lo que tú tienes.</li>
+          <li><strong>Recuerda lo que Dios ya hizo por ti.</strong> David recordó el león y el oso. ¿Qué cosas buenas ha hecho Dios por ti?</li>
+        </ul>
+        <p class="ask">¿Cuál es un «gigante» al que le tienes miedo? ¿Quién es más grande que ese gigante?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section class="part guia" id="juegos">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Juegos y dinámicas</p>
+        <h2>Para moverse, repasar y memorizar</h2>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Rompehielo</span><span class="pill o">5 min</span></div>
+        <h3>Entrenamiento de pastores</h3>
+        <p>«¡Bienvenidos al campamento de pastores! Hoy van a entrenar como David». Grita los nombres de las cinco poses (¡David!, ¡Goliat!, ¡Saúl!, ¡Ovejas!, ¡Honda!) y los niños las hacen. Empieza lento y ve cada vez más rápido. Mezcla trampas: «¡Goliat… no, David!». El equipo que lo hace mejor gana una piedrita.</p>
+        <p class="note">Estas poses se usan después en la historia y en el repaso. Vale la pena dedicarles estos minutos.</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Lección objetiva</span><span class="pill o">7 min</span><span class="pill o">Lana o cinta · metro</span></div>
+        <h3>¿Qué tan grande era Goliat?</h3>
+        <p>Corta 2,90 m de lana (o pega cinta en el piso). Pide a los niños que se acuesten uno tras otro, de cabeza a pies, a lo largo de la lana. «¡Hacen falta casi tres niños para hacer un Goliat!». Luego sostén la lana contra la pared: ¡pasa la puerta!</p>
+        <p class="ask">¿Tendrían miedo de pelear con alguien de este tamaño?</p>
+        <p>Di: «David también vio lo grande que era Goliat. Pero recordó algo: Dios es todavía más grande».</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Relevos</span><span class="pill o">8 min</span><span class="pill o">2 juegos de ropa grande</span></div>
+        <h3>Carrera de la armadura de Saúl</h3>
+        <p>Cada equipo hace una fila. Al frente pon una silla con la «armadura»: camisa o saco de adulto, balde o casco y zapatos grandes. El primero corre, se pone todo, da una vuelta a la silla, se lo quita y corre a tocar al siguiente. ¡Es muy difícil y muy chistoso!</p>
+        <p>Segunda ronda, <strong>«como David»</strong>: sin armadura, solo con una piedra en la mano. ¡Van mucho más rápido!</p>
+        <p>Pregunta: «¿Cuál fue más fácil? La armadura de Saúl no era para David. Dios le dio a David lo que necesitaba: su honda, sus piedras y su confianza en Dios. Dios también te hizo a ti especial; no tienes que ser como otro».</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Repaso</span><span class="pill o">7 min</span></div>
+        <h3>¿David, Saúl o Goliat?</h3>
+        <p>Lee una frase. Todos hacen la pose del personaje del que se habla (David agachado, Saúl con corona, Goliat de puntillas). Quien se equivoca no sale, pero el equipo que tenga a todos correctos gana una piedrita. Los niños de 8–9 años pueden leer algunas frases.</p>
+        <ol class="qa">
+          <li>Cuidaba las ovejas de su papá. <span>— David</span></li>
+          <li>Era el rey de Israel. <span>— Saúl</span></li>
+          <li>Medía casi tres metros. <span>— Goliat</span></li>
+          <li>Gritaba todos los días: «¡Envíen a un hombre!». <span>— Goliat</span></li>
+          <li>Llevó pan y quesos a sus hermanos. <span>— David</span></li>
+          <li>Tenía miedo y no salía a pelear. <span>— Saúl</span></li>
+          <li>Venció a un león y a un oso. <span>— David</span></li>
+          <li>Le prestó su armadura a David. <span>— Saúl</span></li>
+          <li>Se burló de David. <span>— Goliat</span></li>
+          <li>Escogió cinco piedras lisas. <span>— David</span></li>
+          <li>Dijo: «La batalla es del Señor». <span>— David</span></li>
+          <li>Cayó al suelo con una sola piedra. <span>— Goliat</span></li>
+        </ol>
+        <p>Termina con dos preguntas para pensar: <em>«¿Por qué ganó David?»</em> (porque confió en Dios) y <em>«¿Qué hizo Dios antes por David?»</em> (lo libró del león y del oso).</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Versículo</span><span class="pill o">8 min</span><span class="pill o">5 piedras grandes escondidas</span></div>
+        <h3>Las cinco piedras</h3>
+        <p>Antes de clase, esconde en el salón cinco piedras grandes de cartulina con las palabras <strong>La · batalla · es · del · Señor</strong> (la última dice también 1 Samuel 17:47). «David buscó cinco piedras en el arroyo. ¡Ahora ustedes buscan las cinco piedras del versículo!».</p>
+        <p>Cuando las encuentren, todos juntos las ponen en orden en el piso y dicen el versículo. Luego los niños cierran los ojos y tú quitas una piedra. Lo vuelven a decir, completando la palabra que falta. Sigue hasta que lo digan sin ninguna piedra.</p>
+        <p class="note">Variante de True Way Kids: cada niño tira un dado; si sale del 1 al 5, toma de su bolsa la piedra con ese número; si sale 6 (la honda), dice el versículo completo.</p>
+      </div>
+
+      <div class="card">
+        <div class="game-meta"><span class="pill">Cierre</span><span class="pill o">8 min</span><span class="pill o">Cara de Goliat · papel</span></div>
+        <h3>Derriba a tu gigante</h3>
+        <p>Pega la cara de Goliat lo más alto que puedas en la pared y marca una línea en el piso. Da a cada niño media hoja de papel. Pregunta: <em>«¿Qué es un gigante para ti? ¿Algo que te da miedo o que te parece muy difícil?»</em> Los mayores lo escriben y los pequeños lo dibujan (la oscuridad, un examen, un perro, estar solo, un niño que molesta…).</p>
+        <p>Arrugan el papel en una bolita. Por turnos, dicen <strong>«¡Dios es más grande que ___!»</strong>, lanzan su bolita a Goliat, y toda la clase grita <strong>«¡La batalla es del Señor!»</strong>.</p>
+        <p>Recoge las bolitas (sin leerlas en voz alta) y ora por esos gigantes en la oración final.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="game-meta"><span class="pill">Calma</span><span class="pill o">Si sobra tiempo</span><span class="pill o">Plastilina</span></div>
+          <h3>Historia de plastilina</h3>
+          <p>Prepara tarjetas con objetos de la historia: pan, queso, piedra, honda, corona, oveja, león, oso, casco, lanza. Un niño saca una tarjeta en secreto y lo modela con plastilina; los demás adivinan. Hay punto extra si quien adivina dice en qué parte de la historia aparece.</p>
+        </div>
+        <div class="card">
+          <div class="game-meta"><span class="pill">Memoria</span><span class="pill o">Si sobra tiempo</span></div>
+          <h3>Dios es más grande que…</h3>
+          <p>Sentados en círculo. El primero dice: «Dios es más grande que un <strong>a</strong>vión». El segundo repite y agrega algo con B: «…que un avión y un <strong>b</strong>us». El tercero sigue con C: «…un avión, un bus y un <strong>c</strong>amello». ¿Hasta qué letra llegan?</p>
+          <p class="note">Al final habla de lo grande y poderoso que es Dios, que ayudó a David a vencer a alguien mucho más grande que él.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="game-meta"><span class="pill">Manualidad y juego</span><span class="pill o">Si sobra tiempo</span><span class="pill o">Página 12 de True Way Kids</span></div>
+        <h3>Goliat derribable</h3>
+        <p>Los niños colorean a Goliat (página 12 del PDF de True Way Kids), lo enrollan como un tubo y lo pegan para que quede de pie. Luego, por turnos, intentan derribarlo lanzando bolitas de papel desde una línea. ¡Pueden llevárselo a casa para jugar con su familia!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUALIDAD -->
+  <section class="part guia" id="manualidad">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Manualidad · 15 minutos</p>
+        <h2>Bolsa de pastor con las cinco piedras</h2>
+        <p>David guardó sus cinco piedras en su bolsa de pastor. Cada niño hace la suya y se la lleva colgada, con las cinco palabras del versículo adentro.</p>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3>Por cada niño</h3>
+          <ul class="checklist">
+            <li>1 bolsa de papel pequeña o un sobre manila, con dos agujeros arriba</li>
+            <li>Unos 80 cm de lana para la correa</li>
+            <li>Las cinco piedras del versículo (hoja imprimible, mejor en cartulina gris)</li>
+            <li>Crayolas o plumones, tijeras de punta roma</li>
+            <li>Opcional: stickers, o piedras reales lisas y un plumón permanente</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pasos</h3>
+          <ol>
+            <li>Escribe tu nombre en la bolsa y decórala como la bolsa de un pastor: ovejas, pasto, una honda.</li>
+            <li>Escribe en la bolsa: «¡La batalla es del Señor!».</li>
+            <li>Pasa la lana por los dos agujeros y anúdala para colgarte la bolsa (un adulto ayuda con el nudo).</li>
+            <li>Colorea de gris las cinco piedras y recórtalas.</li>
+            <li>Ordénalas del 1 al 5, di el versículo y guárdalas en tu bolsa.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="tip"><b>Mientras trabajan, pregunta:</b> «¿Cuántas piedras usó David para vencer a Goliat?» (¡Una sola!). «Entonces, ¿quién ganó la batalla, la piedra o Dios?».</div>
+      <div class="tip"><b>Para ahorrar tiempo:</b> recorta antes las piedras para los niños de 6–7 años. Los de 8–9 pueden recortar las suyas y ayudar a los pequeños con los nudos. Con más tiempo y ayudantes, pueden hacer la bolsa de fieltro cosida con lana de True Way Kids (página 11).</div>
+    </div>
+  </section>
+
+  <!-- HOJAS -->
+  <section class="part" id="hojas">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Hojas imprimibles</p>
+        <h2>Actividades para imprimir</h2>
+        <div class="card print-note no-print">
+          <p>Para imprimir, abre este archivo (<code>david-y-goliat.html</code>) en tu computadora con Chrome o Edge y presiona <strong>Ctrl + P</strong>. Cada hoja sale en su propia página. Marca la casilla de abajo si solo quieres imprimir las hojas, sin la guía del maestro.</p>
+          <label class="toggle" for="solo-hojas"><input type="checkbox" id="solo-hojas"> Imprimir solo las hojas de los niños</label>
+        </div>
+      </div>
+
+      <!-- Hoja 1: Piedras del versículo -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Plantilla de la manualidad</span><span>1 Samuel 17:47</span></div>
+        <h3>Las cinco piedras del versículo</h3>
+        <p class="sub">Colorea las piedras de gris, recórtalas y guárdalas en tu bolsa de pastor. Esta hoja alcanza para tres niños.</p>
+        <div class="stones" id="piedras"></div>
+      </article>
+
+      <!-- Hoja 2: Laberinto -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>David y Goliat · 1 Samuel 17:40</span></div>
+        <h3>Ayuda a David a llegar al arroyo</h3>
+        <p class="sub">David fue al arroyo a escoger cinco piedras lisas. Traza el camino y luego colorea las cinco piedras.</p>
+        <div class="art" id="maze"></div>
+      </article>
+
+      <!-- Hoja 3: ¿David, Saúl o Goliat? -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>David y Goliat · 1 Samuel 17</span></div>
+        <h3>¿David, Saúl o Goliat?</h3>
+        <p class="sub">Lee cada frase y marca con una ✗ a quién se refiere.</p>
+        <table class="who">
+          <thead><tr><th>Frase</th><th>David</th><th>Saúl</th><th>Goliat</th></tr></thead>
+          <tbody id="who-sheet"></tbody>
+        </table>
+      </article>
+
+      <!-- Hoja 4: Mi gigante -->
+      <article class="hoja">
+        <div class="hoja-top"><span>Nombre: <span class="blank"></span></span><span>1 Samuel 17:47</span></div>
+        <h3>Completa el versículo</h3>
+        <ul class="wordbank"><li>Señor</li><li>batalla</li></ul>
+        <p class="fill">La <span class="gap"></span> es del <span class="gap"></span>.<br><small>1 Samuel 17:47</small></p>
+        <h3>Dios es más grande que mi gigante</h3>
+        <div class="giant-box">
+          <div class="drawbox">Dibuja tu «gigante»: algo que te da miedo o que te parece muy difícil.</div>
+          <div class="drawbox">Ahora dibújate a ti siendo valiente, porque Dios está contigo.</div>
+        </div>
+        <p class="fill">Dios es más grande que <span class="gap" style="min-width: 260px"></span>.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RESPUESTAS -->
+  <section class="part guia" id="respuestas">
+    <div class="wrap stack">
+      <div class="part-head">
+        <p class="label">Solo para el maestro</p>
+        <h2>Respuestas</h2>
+      </div>
+      <div class="keys">
+        <div class="card">
+          <h3>Laberinto</h3>
+          <div id="maze-key"></div>
+        </div>
+        <div class="card">
+          <h3>¿David, Saúl o Goliat?</h3>
+          <table class="who">
+            <thead><tr><th>Frase</th><th>Respuesta</th></tr></thead>
+            <tbody id="who-key"></tbody>
+          </table>
+          <h3>Versículo</h3>
+          <p>La <strong>batalla</strong> es del <strong>Señor</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="guia">
+  <div class="wrap">Preparado para la Escuela Dominical de la Iglesia Catedral de Fe · Basado en la lección 33 de True Way Kids · Versículo según la NVI (en la Reina-Valera 1960: «porque de Jehová es la batalla»). El PDF de True Way Kids lo cita como 17:46, pero la frase está en el versículo 47.</div>
+</footer>
+
+<script>
+(function () {
+  function rng(seed) {
+    return function () {
+      seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs, parent) {
+    var el = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(el);
+    return el;
+  }
+  var DISPLAY = "'Baloo 2', 'Trebuchet MS', sans-serif";
+  var STONE = "M28 76 C22 34 76 14 118 16 C168 18 204 44 200 86 C196 122 150 142 104 138 C56 134 32 112 28 76 Z";
+
+  /* ---------- Piedras del versículo ---------- */
+  var VERSE = ["La", "batalla", "es", "del", "Señor"];
+  var hostP = document.getElementById("piedras");
+  VERSE.forEach(function (w, i) {
+    for (var set = 0; set < 3; set++) {
+      var svg = svgEl("svg", { viewBox: "0 0 220 150", role: "img", "aria-label": "Piedra " + (i + 1) + ": " + w });
+      svgEl("path", { d: STONE, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 3.5 }, svg);
+      svgEl("path", { d: "M52 58 q10 -22 40 -26", fill: "none", stroke: "#9A9A9A", "stroke-width": 3, "stroke-linecap": "round" }, svg);
+      var n = svgEl("text", { x: 112, y: 54, "text-anchor": "middle", "font-family": DISPLAY, "font-size": 22, "font-weight": 800, fill: "#1E1E1E" }, svg);
+      n.textContent = i + 1;
+      var t = svgEl("text", { x: 112, y: 98, "text-anchor": "middle", "font-family": DISPLAY, "font-size": 40, "font-weight": 800, fill: "#1E1E1E" }, svg);
+      t.textContent = w;
+      if (i === 4) {
+        var r = svgEl("text", { x: 112, y: 124, "text-anchor": "middle", "font-family": "'Atkinson Hyperlegible', sans-serif", "font-size": 15, fill: "#1E1E1E" }, svg);
+        r.textContent = "1 Samuel 17:47";
+      }
+      hostP.appendChild(svg);
+    }
+  });
+
+  /* ---------- ¿David, Saúl o Goliat? ---------- */
+  var WHO = [
+    ["Era pastor de ovejas.", 0], ["Era el rey de Israel.", 1], ["Medía casi tres metros.", 2],
+    ["Era un soldado filisteo.", 2], ["Venció a un león y a un oso.", 0], ["Le prestó su armadura a David.", 1],
+    ["Gritaba: «¡Envíen a un hombre!».", 2], ["Tenía miedo y no salía a pelear.", 1], ["Recogió cinco piedras lisas.", 0],
+    ["Se burló de David.", 2], ["Dijo: «La batalla es del Señor».", 0], ["Llevaba espada, lanza y escudo.", 2]
+  ];
+  var NAMES = ["David", "Saúl", "Goliat"];
+  var sheet = document.getElementById("who-sheet"), key = document.getElementById("who-key");
+  WHO.forEach(function (row, i) {
+    var tr = document.createElement("tr");
+    var td = document.createElement("td"); td.textContent = (i + 1) + ". " + row[0]; tr.appendChild(td);
+    for (var k = 0; k < 3; k++) { var b = document.createElement("td"); b.className = "box"; tr.appendChild(b); }
+    sheet.appendChild(tr);
+    var tk = document.createElement("tr");
+    var a = document.createElement("td"); a.textContent = (i + 1) + ". " + row[0]; tk.appendChild(a);
+    var m = document.createElement("td"); m.className = "mark"; m.textContent = NAMES[row[1]]; tk.appendChild(m);
+    key.appendChild(tk);
+  });
+
+  /* ---------- Laberinto ---------- */
+  var COLS = 10, ROWS = 12, S = 36, OX = 20, OY = 60;
+  var mr = rng(2410);
+  var cells = [];
+  for (var y = 0; y < ROWS; y++) { cells.push([]); for (var x = 0; x < COLS; x++) cells[y].push({ n: 1, e: 1, s: 1, w: 1, v: 0 }); }
+  var stack = [[0, 0]]; cells[0][0].v = 1;
+  while (stack.length) {
+    var cur = stack[stack.length - 1], cy = cur[0], cx = cur[1], opts = [];
+    if (cy > 0 && !cells[cy - 1][cx].v) opts.push(["n", cy - 1, cx, "s"]);
+    if (cy < ROWS - 1 && !cells[cy + 1][cx].v) opts.push(["s", cy + 1, cx, "n"]);
+    if (cx > 0 && !cells[cy][cx - 1].v) opts.push(["w", cy, cx - 1, "e"]);
+    if (cx < COLS - 1 && !cells[cy][cx + 1].v) opts.push(["e", cy, cx + 1, "w"]);
+    if (!opts.length) { stack.pop(); continue; }
+    var o = opts[Math.floor(mr() * opts.length)];
+    cells[cy][cx][o[0]] = 0; cells[o[1]][o[2]][o[3]] = 0; cells[o[1]][o[2]].v = 1;
+    stack.push([o[1], o[2]]);
+  }
+  cells[0][0].n = 0; cells[ROWS - 1][COLS - 1].s = 0;
+
+  // Camino de la solución (BFS)
+  var prev = {}, q = [[0, 0]], seen = { "0,0": 1 };
+  while (q.length) {
+    var p = q.shift(), py = p[0], px = p[1], c = cells[py][px];
+    if (py === ROWS - 1 && px === COLS - 1) break;
+    [["n", -1, 0], ["s", 1, 0], ["w", 0, -1], ["e", 0, 1]].forEach(function (m) {
+      var ny = py + m[1], nx = px + m[2];
+      if (c[m[0]] || ny < 0 || nx < 0 || ny >= ROWS || nx >= COLS || seen[ny + "," + nx]) return;
+      if (m[0] === "n" && py === 0) return;
+      seen[ny + "," + nx] = 1; prev[ny + "," + nx] = py + "," + px; q.push([ny, nx]);
+    });
+  }
+  var path = [], at = (ROWS - 1) + "," + (COLS - 1);
+  while (at) { path.unshift(at.split(",").map(Number)); at = prev[at]; }
+
+  function drawMaze(host, withPath) {
+    var W = COLS * S + OX * 2, H = ROWS * S + OY + 130;
+    var svg = svgEl("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Laberinto" });
+    var g = svgEl("g", { stroke: "#1E1E1E", "stroke-width": 3.5, "stroke-linecap": "round", fill: "none" }, svg);
+    var d = "";
+    for (var y = 0; y < ROWS; y++) for (var x = 0; x < COLS; x++) {
+      var c = cells[y][x], X = OX + x * S, Y = OY + y * S;
+      if (c.n) d += "M" + X + " " + Y + "h" + S;
+      if (c.w) d += "M" + X + " " + Y + "v" + S;
+      if (x === COLS - 1 && c.e) d += "M" + (X + S) + " " + Y + "v" + S;
+      if (y === ROWS - 1 && c.s) d += "M" + X + " " + (Y + S) + "h" + S;
+    }
+    svgEl("path", { d: d }, g);
+    // Inicio
+    svgEl("path", { d: "M" + (OX + S / 2) + " " + (OY - 22) + "v14 m-7 -7 l7 7 l7 -7", stroke: "#1E1E1E", "stroke-width": 3, fill: "none", "stroke-linecap": "round", "stroke-linejoin": "round" }, svg);
+    var t1 = svgEl("text", { x: OX, y: OY - 30, "font-family": DISPLAY, "font-size": 20, "font-weight": 800, fill: "#1E1E1E" }, svg);
+    t1.textContent = "INICIO: David";
+    // Arroyo con cinco piedras
+    var ay = OY + ROWS * S + 26;
+    svgEl("path", { d: "M" + (OX + 60) + " " + (ay + 14) + " q40 -18 80 0 t80 0 t80 0 t80 0", fill: "none", stroke: "#1E1E1E", "stroke-width": 2.5, "stroke-linecap": "round" }, svg);
+    svgEl("path", { d: "M" + (OX + 60) + " " + (ay + 60) + " q40 -18 80 0 t80 0 t80 0 t80 0", fill: "none", stroke: "#1E1E1E", "stroke-width": 2.5, "stroke-linecap": "round" }, svg);
+    for (var k = 0; k < 5; k++) {
+      svgEl("ellipse", { cx: OX + 120 + k * 46, cy: ay + 37, rx: 17, ry: 11, fill: "#FFFFFF", stroke: "#1E1E1E", "stroke-width": 2.5 }, svg);
+    }
+    var t2 = svgEl("text", { x: OX + 212, y: ay + 92, "text-anchor": "middle", "font-family": DISPLAY, "font-size": 20, "font-weight": 800, fill: "#1E1E1E" }, svg);
+    t2.textContent = "ARROYO";
+    if (withPath) {
+      var pts = path.map(function (p) { return (OX + p[1] * S + S / 2) + "," + (OY + p[0] * S + S / 2); });
+      pts.unshift((OX + S / 2) + "," + (OY - 6));
+      pts.push((OX + (COLS - 1) * S + S / 2) + "," + (OY + ROWS * S + 16));
+      svgEl("polyline", { points: pts.join(" "), fill: "none", stroke: "#E0A100", "stroke-width": 7, "stroke-linecap": "round", "stroke-linejoin": "round", opacity: .85 }, svg);
+    }
+    host.appendChild(svg);
+  }
+  drawMaze(document.getElementById("maze"), false);
+  drawMaze(document.getElementById("maze-key"), true);
+
+  /* ---------- Imprimir solo las hojas ---------- */
+  var box = document.getElementById("solo-hojas");
+  box.addEventListener("change", function () { document.body.classList.toggle("solo-hojas", box.checked); });
+})();
+</script>
